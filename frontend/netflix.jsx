@@ -6,6 +6,7 @@ import  {Login , Logout, Signup} from "./actions/session_actions"
 
 document.addEventListener("DOMContentLoaded" ,() => {
     const root = document.getElementById('root');
+    let store;
     if (window.currentUser) {
         const preloadedState = {
         entities: {
@@ -16,7 +17,7 @@ document.addEventListener("DOMContentLoaded" ,() => {
         store = configureStore(preloadedState);
         delete window.currentUser;
     } else {
-        store = configureStore();
+       store = configureStore();
     }
     
     ReactDOM.render(<Root store={store} />, root);

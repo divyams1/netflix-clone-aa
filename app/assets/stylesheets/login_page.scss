@@ -9,11 +9,12 @@
     font-size: 50px;
 }
 .session-form {
-    background-color: gray;
+    background-color: black;
     height: 400px; 
-    width: 33%;
+    width: 25%;
     display: flex;
     justify-content: center;
+    opacity: .8;
 }
 .login-input {
     padding: 5px;
@@ -28,4 +29,26 @@
 
 .login-text {
     color: white;
+}
+
+.login-container {
+    display: flex;
+  
+    justify-content: center;
+}
+
+.login-text {
+    color: gray;
+}
+
+.login-text-link {
+    color: white;
+    text-decoration: none;
+}
+
+.loginbreak {
+    height:20px;
+}
+.signup-input {
+    width: 100%;
 }

@@ -1,0 +1,30 @@
+.login-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-bar h1 {
+    color: red;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
+}
+
+.signin-btn {
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    height: 40%;
+    width: 6%;
+    font-weight: 400;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.top-greeting-box {
+    background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/bcd713c9-291e-4186-a275-117b387eaaf2/2af1c55a-fdb6-4f2e-8e5b-63fd1c52f0b4/US-en-20201019-popsignuptwoweeks-perspective_alpha_website_small.jpg');
+}

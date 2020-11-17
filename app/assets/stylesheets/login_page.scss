@@ -1,0 +1,31 @@
+.login-page {
+    height: 1600px;
+    background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/bcd713c9-291e-4186-a275-117b387eaaf2/2af1c55a-fdb6-4f2e-8e5b-63fd1c52f0b4/US-en-20201019-popsignuptwoweeks-perspective_alpha_website_small.jpg');
+}
+
+.loginNetflix {
+    color: red;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
+}
+.session-form {
+    background-color: gray;
+    height: 400px; 
+    width: 33%;
+    display: flex;
+    justify-content: center;
+}
+.login-input {
+    padding: 5px;
+    margin: 10px;
+}
+
+.signin-login-btn {
+    width: 95%;
+    height: 50px;
+    font-weight: 300;
+}
+
+.login-text {
+    color: white;
+}

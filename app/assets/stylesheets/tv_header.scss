@@ -1,0 +1,24 @@
+.tv {
+    border-top: 7px solid lightgray;
+    background-color: black;
+    color:white;
+    display: flex;
+    justify-content: center;
+}
+
+.tv-text {
+    width: 30%;
+}
+
+.tv-text-header {
+    width: 100%; 
+    font-weight: 300;
+}
+
+.tv-text-text {
+    width: 75%
+}
+
+.tv-image {
+    height: 50%;
+}

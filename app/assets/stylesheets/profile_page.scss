@@ -1,0 +1,24 @@
+.profiles-page {
+    background: black;
+    color: white;
+}
+
+.netflix-text {
+    color: red;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
+}
+
+.profiles-header {
+    display: flex;
+    justify-content: center;
+}
+.profiles-col {
+    display: flex;
+    justify-content: space-around;
+}
+
+.profile-image {
+    height: 200px;
+    width: 200px;
+}

@@ -4,9 +4,12 @@ import configureStore from './store/store';
 import Root from "./components/root";
 import  {Login , Logout, Signup} from "./actions/session_actions"
 
+
+
 document.addEventListener("DOMContentLoaded" ,() => {
     const root = document.getElementById('root');
     let store;
+  
     if (window.currentUser) {
         const preloadedState = {
         entities: {

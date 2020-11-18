@@ -3,31 +3,28 @@ import React from 'react';
 class DropDown extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { showMenu: false }
-        this.showMenu = this.showMenu.bind(this)
-        this.closeMenu = this.closeMenu.bind(this)
+        this.state = { showMenu: false };
+        this.showMenu = this.showMenu.bind(this);
+        this.closeMenu = this.closeMenu.bind(this);
     }
 
     showMenu(e) {
         e.preventDefault();
-        this.setState({
-            showMenu: true
-        }
-    ,() => {document.addEventListener('click', this.closeMenu);
-    })
-    }
-
-    closeMenu() {
-        this.setState({showMenu: false}), () => {
-            document.removeEventListener('click', this.closeMenu)
-        }
+        this.setState({showMenu: true})
+     }
+    closeMenu(e) {
+        e.preventDefault();
+        this.setState({showMenu: false})
     }
     render() {
         return (
             <div>
+                <div>
                 <button onClick={this.showMenu}>
-                    {this.props.btntext}
+                    {this.props.btntext}  
                 </button>
+                 <button onClick={this.closeMenu}> - </button>
+                </div>
 
                 {
                     this.state.showMenu ? (

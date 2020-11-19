@@ -22,15 +22,15 @@ class Demo extends React.Component {
                         <form>
                             <h1 className="login-text"> Sign In </h1>
                             <label>
-                                <input type='text' className="login-input"  value="demo" />
+                                <input type='text' readOnly className="login-input"  value="demo" />
                             </label>
                             <br></br>
                             <label>
-                                <input type='text' className="login-input"   value="demo" />
+                                <input type='text' readOnly className="login-input"   value="demo" />
                             </label>
                             <br></br>
                             <label>
-                                <input type='password' className="login-input"   value="hunter2" />
+                                <input type='password' readOnly className="login-input"   value="hunter2" />
                             </label>
                             <br></br>
                             <button className="signin-btn signin-login-btn" onClick = {this.handleSubmit}> Sign In </button>

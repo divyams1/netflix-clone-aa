@@ -12,8 +12,10 @@ class AddProfile extends React.Component {
 
     handleSubmit(e)  {
         e.preventDefault();
-        this.props.createProfile(this.state);
+        this.props.createProfile(this.state)
+            .then(this.props.toggleShow())
     }
+
 
 
     render() {
@@ -27,11 +29,12 @@ class AddProfile extends React.Component {
                     </div>
                     <form>
                         <img className="profile-image" src="https://ih0.redbubble.net/image.618427277.3222/flat,1000x1000,075,f.u2.jpg" />
-                        <input type='text' value={this.state.name || "Name"} onChange={this.update('name')}></input>
+                        <input type='text' value={this.state.name} placeholder="Name" onChange={this.update('name')}></input>
 
-                        <button onClick={this.handleSubmit}>Continue</button> 
-                        <button> Cancel </button>
+                        <button type="button" onClick={this.handleSubmit}>Continue</button> 
+                        
                     </form>
+                    <button onClick={this.props.toggleShow}> Cancel </button>
                 </div>
             </div>
         )

@@ -1,8 +1,19 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+class Demo extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
 
-export default () => {
-    return (
-        <div className ='login-page'>
+    handleSubmit(e) {
+        e.preventDefault();
+        const user={username: 'demo', password:'hunter2', email:'demo'}
+        this.props.processForm(user)
+            .then(  (user) => this.props.history.push(`/`))
+    }
+    render() {
+        const demoDisplay = (  <div className ='login-page'>
                 <div>
                     <h1 className="loginNetflix"> Netflix </h1>
                 </div>
@@ -11,15 +22,15 @@ export default () => {
                         <form>
                             <h1 className="login-text"> Sign In </h1>
                             <label>
-                                <input type='text' className="login-input"  placeholder="Enter your username" value={this.state.username} onChange={this.handleInput('username')}/>
+                                <input type='text' className="login-input"  value="demo" />
                             </label>
                             <br></br>
                             <label>
-                                <input type='text' className="login-input"  placeholder="Enter your email" value={this.state.email} onChange={this.handleInput('email')}/>
+                                <input type='text' className="login-input"   value="demo" />
                             </label>
                             <br></br>
                             <label>
-                                <input type='password' className="login-input"  placeholder="Enter your password" value={this.state.password} onChange={this.handleInput('password')}/>
+                                <input type='password' className="login-input"   value="hunter2" />
                             </label>
                             <br></br>
                             <button className="signin-btn signin-login-btn" onClick = {this.handleSubmit}> Sign In </button>
@@ -30,6 +41,13 @@ export default () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>)
+    return (
+       <div>
+           {demoDisplay}
+       </div>
     )
+    }
 }
+
+export default Demo;

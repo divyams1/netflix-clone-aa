@@ -1,18 +1,20 @@
-.download {
+.watch {
     border-top: 5px solid gray;
     padding-top: 50px;
-    height: 500px;
-    background-color: black;
-    color: white;
+    background: black;
     display: flex; 
     justify-content: center;
+    height: 500px;
 }
 
-.download-image {
-    height: 200px;
+.watch-text {
+    color: white;
+    width: 25%;
     padding-right: 50px;
 }
-.download-text {
+
+.watch-image {
+    width:25%;
     padding-left: 100px;
-    width: 25%;
+    height: 200px;
 }

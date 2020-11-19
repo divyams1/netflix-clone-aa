@@ -1,9 +1,11 @@
 .tv {
-    border-top: 7px solid lightgray;
+    padding-top: 50px;
+    border-top: 5px solid gray;
     background-color: black;
     color:white;
     display: flex;
     justify-content: center;
+    height: 500px;
 }
 
 .tv-text {

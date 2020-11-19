@@ -4,8 +4,9 @@ import AddProfileContainer from './add_profile_container';
 class UserShowPage extends React.Component {
     constructor(props) {
         super(props)
-        this.state = { addPage: false}
+        this.state = { addPage: false, editPage: false}
         this.showMenu = this.showMenu.bind(this);
+        this.toggleShow = this.toggleShow.bind(this);
     }
     componentDidMount() {
         this.props.fetchProfiles();
@@ -13,6 +14,15 @@ class UserShowPage extends React.Component {
     showMenu(e) {
         e.preventDefault();
         this.setState({ addPage: true})
+    }
+    // componentDidUpdate(prevProps, prevState) {
+    //     if (prevStates.entitities.profiles !== this.props.profiles) {
+
+    //     }
+    // }
+
+    toggleShow() {
+        this.setState({ addPage: false})
     }
     render() {
          const add_button = (this.props.currentUser.profile_ids.length < 5 ? (
@@ -27,7 +37,7 @@ class UserShowPage extends React.Component {
         const profiles = this.props.currentUser.profile_ids.map( (id,idx) => {
             const prof = this.props.profiles[id-1];
             if (prof) {
-            return <div key={idx}>
+            return <div key={idx} >
                 <img src="https://i.pinimg.com/originals/0d/dc/ca/0ddccae723d85a703b798a5e682c23c1.png" />
                  <h1> {prof.name} </h1>
             </div>
@@ -45,9 +55,9 @@ class UserShowPage extends React.Component {
                 </div>
                 
             </div>)
-        const display = (this.state.addPage ? <AddProfileContainer /> : show_profiles)
+        const display = (this.state.addPage ? <AddProfileContainer toggleShow={this.toggleShow} /> : show_profiles)
         return ( 
-            <div>
+            <div className="showpage-container">
           {display}
           </div>
         )

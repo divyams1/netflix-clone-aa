@@ -14,8 +14,9 @@
     background-color: red;
     color: white;
     text-decoration: none;
-    height: 40%;
-    width: 6%;
+    height: 20%;
+    padding: 20px;
+    width: 80%;
     font-weight: 400;
     padding-top: 4px;
     padding-bottom: 4px;
@@ -26,5 +27,28 @@
 }
 
 .top-greeting-box {
-    background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/bcd713c9-291e-4186-a275-117b387eaaf2/2af1c55a-fdb6-4f2e-8e5b-63fd1c52f0b4/US-en-20201019-popsignuptwoweeks-perspective_alpha_website_small.jpg');
+    height: 700px;
+    background-image: url('https://mppmduse2pmpovwapp.azurewebsites.net/wp-content/uploads/2019/09/netflix-background-9.jpg');
+}
+
+.greeting-header {
+    font-size: 60px;
+}
+
+.greeting-text-div {
+    width: 35%;
+}
+
+.greeting-subtext1 {
+    font-size: 25;
+    text-align: center;
+}
+.greeting-subtext2 {
+    font-size: 20;
+    text-align: center;
+}
+
+.sign-in-demo {
+    display: flex;
+    flex-direction: column;
 }

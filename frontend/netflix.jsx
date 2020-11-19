@@ -9,7 +9,7 @@ import  {Login , Logout, Signup} from "./actions/session_actions"
 document.addEventListener("DOMContentLoaded" ,() => {
     const root = document.getElementById('root');
     let store;
-  
+    
     if (window.currentUser) {
         const preloadedState = {
         entities: {
@@ -22,7 +22,9 @@ document.addEventListener("DOMContentLoaded" ,() => {
     } else {
        store = configureStore();
     }
-    
+    window.Logout = Logout;
+    window.store = store; 
+    window.dispatch = store.dispatch;
     ReactDOM.render(<Root store={store} />, root);
 
 })

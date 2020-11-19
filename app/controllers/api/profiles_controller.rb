@@ -15,6 +15,11 @@ class Api::ProfilesController < ApplicationController
         render json: profile
     end 
 
+    def show 
+        profile = Profile.find(params[:id])
+        render json: profile
+    end 
+
     private
     def profile_params 
         params.require(:profile).permit(:name, :user_id)

@@ -1,6 +1,6 @@
 export const RECEIVE_PROFILE = "RECEIVE_PROFILE"
 export const RECEIVE_ALL_PROFILES = "RECEIVE_ALL_PROFILES"
-import {getProfiles, makeProfile} from '../util/profile_util'
+import {getProfiles, makeProfile, getProfile} from '../util/profile_util'
 
 const receiveAllProfiles = profiles => {
     return {
@@ -25,4 +25,9 @@ export const fetchProfiles = () => dispatch => {
 export const createProfile = profile => dispatch => {
     return makeProfile(profile)
         .then(profile => dispatch(receiveProfile(profile)));
+}
+
+export const fetchProfile = profileId => dispatch => {
+    return getProfile(profileId)
+        .then( profile => dispatch(receiveProfile(profile)))
 }

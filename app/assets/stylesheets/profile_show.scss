@@ -1,0 +1,57 @@
+.profile-show {
+    background-color: black;
+    color: white; 
+    height: 1500px;
+    margin: 0;
+}
+
+.netflix-show-prof-text {
+    margin: 0;
+    padding: 0;
+
+}
+
+.nav-bar-show {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; 
+    z-index: 1;
+    width: 100%;
+}
+
+
+
+.nav-bar-left {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-bar-right {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-bar-image {
+    height: 30px;
+    width: 30px;
+}
+
+.nav-bar-item {
+    padding-left:10px;
+    padding-right: 10px;
+    font-size: 15px;
+}
+
+.netflix-text-navbar {
+    margin-left: 30px;
+    padding-right: 10px;
+    background: transparent;
+}
+.last-item {
+    margin-right: 30px;
+}
+
+a {
+    text-decoration: none;
+}

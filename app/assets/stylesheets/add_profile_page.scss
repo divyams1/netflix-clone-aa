@@ -1,12 +1,74 @@
 .add-profile-container {
     background-color: black;
     color: white;
+  
+
 }
 .add-form-container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profile-subtext {
     color: gray;
+    font-size: 28px;
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid gray;
+}
+.Add-prof-text {
+    font-size: 60px;
+    margin: 0;
+}
+
+.profile-image {
+    margin: 15px;
+}
+
+.add-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.name-form-input {
+    width: 100%;
+    height: 25px;
+    background-color: gray;
+    color: white;
+    padding-left: 40px;
+    margin-top: 15px;
+}
+.name-form-input::placeholder {
+    color: white;
+}
+.cont-button {
+    margin-right: 10px;
+    width: 140px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    height: 40px;
+    border: none;
+    font-weight: bold;
+    word-spacing: 5px;
+}
+.cancel-button{
+    margin-left: 10px;
+    width: 100px;
+    background-color:black;
+    color: gray;
+    font-size: 20px;
+    height: 40px;
+    border: 2px solid gray;
+    font-weight: bold;
+}
+
+.add-prof-bottom-button-cont {
+    width: 35%;
+    padding-top: 40px;
+    border-top: 2px solid gray;
+    display: flex;
+    justify-content: center;
 }

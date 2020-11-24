@@ -14,3 +14,9 @@ export const makeProfile = profile => {
     })
 }
 
+export const getProfile = profileId => {
+    return $.ajax({
+        method: "GET",
+        url: `/api/profiles/${profileId}`
+    })
+}

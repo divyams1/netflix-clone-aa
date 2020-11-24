@@ -29,3 +29,22 @@
     height: 2000px;
     background-color: black;
 }
+
+.prof-name-text {
+    text-decoration: none;
+}
+.button-div {
+    height: 100px;
+}
+.add-button-container {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+.add-button-img {
+    margin: 0px;
+    padding: 0px;
+}
+.add-prof-button {
+    margin-top: 30px;
+}

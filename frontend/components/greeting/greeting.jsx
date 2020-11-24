@@ -35,7 +35,7 @@ const Greeting = ({currentUser, profiles, fetchProfiles, logout}) => {
                     <h1 className="greeting-header"> Unlimited movies, TV shows, and more.</h1>
                     <h3 className="greeting-subtext1"> Watch anywhere. Cancel anytime.</h3>
                     <h3 className="greeting-subtext2"> Ready to watch? Enter your email to create or restart your membership</h3>
-                    <Link className="btn signup-btn" to="/signup">  Sign Up</Link>
+                    <Link className="btn signin-btn" to="/signup">  Sign Up</Link>
                     
                     </div>
                     <div></div>

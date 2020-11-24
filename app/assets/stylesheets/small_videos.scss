@@ -1,0 +1,37 @@
+.small-video-container {
+    height: 150px;
+    width: 250px;
+}
+
+.video-image {
+    height: 150px;
+    width: 250px;
+    margin: 10px;
+}
+
+.big-video-image {
+    height: 225px;
+    width: 400px;
+    z-index: 1;
+}
+.button-list {
+    background-color: 	rgb(48,48,48);
+    display: flex;
+    justify-content: space-between;
+}
+
+.video-cont {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.video-button {
+    border-radius: 100px;
+    height: 35px;
+    width: 35px;
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}

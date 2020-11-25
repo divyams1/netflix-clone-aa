@@ -13,6 +13,7 @@ class Demo extends React.Component {
             .then(  (user) => this.props.history.push(`/`))
     }
     render() {
+        debugger
         const demoDisplay = (  <div className ='login-page'>
                 <div>
                     <h1 className="loginNetflix"> Netflix </h1>

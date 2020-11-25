@@ -20,7 +20,7 @@ class SmallVideo extends React.Component {
 //               </video>
                 <div className="button-list">
                     <div className="left-buttons">
-                        <button className="video-button"> {play}  </button>
+                        <button className="video-button" > {play}  </button>
                         <button className="video-button"> {plus} </button>
                     </div>
                     <div className="right-buttons">

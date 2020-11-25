@@ -16,8 +16,8 @@ class CarouselVideo extends React.Component {
         
         const right = <FontAwesomeIcon icon={faChevronRight} />
         const right_button = (this.state.hovered? (<button> {right} </button>) : null );
-        const display =( Object.keys(this.props.videos).length > 0 ?  (<div>
-            <h1> GENRE TITLE </h1>
+        const display =( Object.keys(this.props.videos).length > 0 ?  (<div className="carousel-whole">
+            <h1> {this.props.genre.name} </h1>
             <br></br>
             <div className="carousel-row">
                 <CarouselRowContainer />

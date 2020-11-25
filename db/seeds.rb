@@ -9,7 +9,7 @@
 require 'open-uri'
 
 video1 = Video.create(title: "Guardians of the Galaxy",  description:
-  " A group of intergalactic criminals must pull together to stop a fanatical warrior with plans to purge the universe. After stealing a mysterious orb in the far reaches of outer space, Peter Quill from Earth is now the main target of a manhunt led by the villain known as Ronan the Accuser.", time: Mon, 04 Mar 0002 05:00:00 UTC +00:00)
+  " A group of intergalactic criminals must pull together to stop a fanatical warrior with plans to purge the universe. After stealing a mysterious orb in the far reaches of outer space, Peter Quill from Earth is now the main target of a manhunt led by the villain known as Ronan the Accuser.", time: DateTime.new(5,2,5))
 vid1 = File.open('https://s3.amazonaws.com/netflix-ds-seeds/gotg.mp4')
 photo1 = File.open('https://s3.amazonaws.com/netflix-ds-seeds/gotg.jpg')
 

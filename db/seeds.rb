@@ -10,7 +10,7 @@ require 'open-uri'
 
 Video.destroy_all 
 Genre.destroy_all
-GenresVideo.destroy_all
+
 
 video1 = Video.create(title: "Guardians of the Galaxy",  description:
   " A group of intergalactic criminals must pull together to stop a fanatical warrior with plans to purge the universe. After stealing a mysterious orb in the far reaches of outer space, Peter Quill from Earth is now the main target of a manhunt led by the villain known as Ronan the Accuser.", time: DateTime.new(5,2,5))

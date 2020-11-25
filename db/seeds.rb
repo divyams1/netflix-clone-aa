@@ -35,7 +35,7 @@ video3.photo.attach( io: photo3, filename: 'avatar.jpg')
 
 video4 = Video.create(title: "Arrow", description: "After a violent shipwreck, billionaire playboy Oliver Queen (Stephen Amell) was missing and presumed dead for five years before being discovered alive on a remote island in the North China Sea. He returned home to Star City, bent on righting the wrongs done by his family and fighting injustice.",
 time: DateTime.new(5,2,3) )
-vid4 - open('https://s3.amazonaws.com/netflix-ds-seeds/arrow.mp4')
+vid4 = open('https://s3.amazonaws.com/netflix-ds-seeds/arrow.mp4')
 photo4 = open('https://s3.amazonaws.com/netflix-ds-seeds/arrow.png')
 
 

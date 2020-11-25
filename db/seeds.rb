@@ -40,7 +40,7 @@ photo4 = open('https://s3.amazonaws.com/netflix-ds-seeds/arrow.png')
 
 
 video4.video.attach( io: vid4, filename: 'arrow.mp4')
-video4.photo.attach( io: photo4, filename: 'arrow.jpg')
+video4.photo.attach( io: photo4, filename: 'arrow.png')
 
 video5 = Video.create(title: "The Flash" , description: "At 11, Barry Allen's life changed completely when his mother died in a freak accident and his innocent father was convicted of her murder. Orphaned Barry later becomes Detective Joe West. Now a crime-scene investigator, his dedication to learn the truth about his mother's death drives him to
 follow up on every new scientific advancement and urban legend.", time: DateTime.new(3,1,2) )

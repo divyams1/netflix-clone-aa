@@ -9,7 +9,7 @@ import ProfileContainer from "./profile/profile_container";
 import VideoShowContainer from './video/video_show_container'
 
 const App = () => {
-    return (<div>
+    return (<div className="page">
         
         <Route path='/' exact component={GreetingContainer} />
         <Route path="/login" exact  component={LoginFormContainer} />

@@ -24,8 +24,6 @@ class Profile extends React.Component {
                 <div>
                     < ShowPageNavBarContainer />
                     < MainVideoContainer />
-                    
-                    
                 </div>
                 {genre_conts}
             </div>

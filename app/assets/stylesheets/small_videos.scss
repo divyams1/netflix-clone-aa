@@ -1,30 +1,58 @@
-.small-video-container {
-    height: 150px;
-    width: 250px;
+.big-box {
+    height: 175px;
+    width: 300px;
+    background-color: black;
+    margin-right: 10px;
 }
-
 .video-image {
-    height: 150px;
-    width: 250px;
+    height: 175px;
+    width: 300px;
     margin: 10px;
     border-radius: 10px;
+    
 }
 
 .big-video-image {
+    display: none;
     height: 350px;
     width: 425px;
-    z-index: 1;
-}
-.button-list {
-    background-color: 	rgb(48,48,48);
-    display: flex;
-    justify-content: space-between;
+
+    margin: 0;
+    padding: 0;
 }
 
+.big-box:hover .big-video-image {
+    display: block;
+    display: absolute;
+    z-index: 1;
+}
+
+
 .video-cont {
+    display: none;
+}
+
+
+.big-box:hover {
+    transition: .3s;
+    display: relative;
+    transition-delay: 1s;
+    height: 350px;
+    width: 425px;
+}
+
+.big-box:hover .video-cont {
+    transition: .3s;
+    display: absolute;
+    transition-delay: 1s;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
+}
+.big-box:hover .video-image {
+    transition: .3s;
+    transition-delay: 1s;
+    display:none;
 }
 
 .video-button {
@@ -35,4 +63,18 @@
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 10px;
+}
+
+.button-list {
+    background-color: 	rgb(48,48,48);
+    display: flex;
+    justify-content: space-between;
+}
+.carousel-row {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.carousel-whole {
+    background-color: black;
 }

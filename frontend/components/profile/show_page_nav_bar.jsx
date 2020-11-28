@@ -12,10 +12,10 @@ class ShowPageNavBar extends React.Component {
         <div className="nav-bar-show">
             <div className="nav-bar-left">
                 <h1 className="netflix-text netflix-text-navbar"> Netflix </h1>
-                <h2 className="nav-bar-item"> Home </h2>
-                <h2 className="nav-bar-item"> TV Shows </h2>
+                <h2 className="nav-bar-item"> https://github.com/divyams1 </h2>
+                {/* <h2 className="nav-bar-item"> TV Shows </h2>
                 <h2 className="nav-bar-item"> New And Popular</h2>
-                <h2 className="nav-bar-item"> My List </h2>
+                <h2 className="nav-bar-item"> My List </h2> */}
             </div>
             <div className="nav-bar-right">
                 <h2 className="nav-bar-item">{search}</h2>

@@ -4,7 +4,8 @@ import {fetchVideo, fetchVideos} from '../../actions/video_actions'
 
 const mSTP = (state,ownProps) => {
     return {
-        videos: state.entities.videos
+        videos: state.entities.videos,
+        genres: state.entities.genres
     }
 }
 

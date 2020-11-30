@@ -23,8 +23,8 @@ class Profile extends React.Component {
             <div className="profile-show ">
                 <div>
                     < ShowPageNavBarContainer currentUser={this.props.currentUser} profiles={this.props.profiles} history={this.props.history} Logout={this.props.Logout} />
-                     {/* < MainVideoContainer />
-                     {genre_conts} */}
+                     < MainVideoContainer />
+                     {genre_conts}
                 </div>
                
             </div>

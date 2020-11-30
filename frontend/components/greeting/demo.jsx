@@ -8,7 +8,7 @@ class Demo extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        const user={username: 'demo2', password:'hunter2', email:'demo2'}
+        const user={username: 'demouser', password:'demouser', email:'demouser'}
         this.props.processForm(user)
             .then(  (user) => this.props.history.push(`/`))
     }
@@ -23,15 +23,15 @@ class Demo extends React.Component {
                         <form>
                             <h1 className="login-text"> Sign In </h1>
                             <label>
-                                <input type='text' readOnly className="login-input"  value="demo2" />
+                                <input type='text' readOnly className="login-input"  value="demouser" />
                             </label>
                             <br></br>
                             <label>
-                                <input type='text' readOnly className="login-input"   value="demo2" />
+                                <input type='text' readOnly className="login-input"   value="demouser" />
                             </label>
                             <br></br>
                             <label>
-                                <input type='password' readOnly className="login-input"   value="hunter2" />
+                                <input type='password' readOnly className="login-input"   value="demouser" />
                             </label>
                             <br></br>
                             <button className="signin-btn signin-login-btn" onClick = {this.handleSubmit}> Sign In </button>

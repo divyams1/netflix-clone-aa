@@ -2,10 +2,16 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlayCircle, faPlusCircle, faChevronDown  } from '@fortawesome/free-solid-svg-icons';
 
+
 class SmallVideo extends React.Component {
     constructor(props) {
         super(props)
         this.state = { hovered: false}
+        this.playClick = this.playClick.bind(this);
+    }
+
+    playClick() {
+        this.props.history.push(`/videos/${this.props.video.id}`)
     }
     render() {
         
@@ -20,8 +26,8 @@ class SmallVideo extends React.Component {
                         </video>
                         <div className="button-list">
                         <div className="left-buttons">
-                            <button className="video-button" > {play}  </button>
-                            <button className="video-button"> {plus} </button>
+                            <button onClick={this.playClick} className="video-button" > {play}  </button>
+                            <button className="video-button play-video-button"> {plus} </button>
                         </div>
                         <div className="right-buttons">
                             <button className="video-button"> {down} </button>

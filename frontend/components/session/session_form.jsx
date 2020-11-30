@@ -37,7 +37,7 @@ class SessionForm extends React.Component {
         const display = ( (this.props.formType === 'login') ? (
             <div className ='login-page'>
                 <div>
-                    <h1 className="loginNetflix"> Netflix </h1>
+                    <h1 className="loginNetflix"> HeroFlix </h1>
                 </div>
                 <div className="login-container">
                     <div className = 'session-form'>
@@ -56,7 +56,7 @@ class SessionForm extends React.Component {
                             </label>
                             <br></br>
                             <button className="signin-btn signin-login-btn" onClick = {this.handleSubmit}> Sign In </button>
-                             <p className="login-text"> New to Netflix? <Link className="login-text-link" to="/signup">Sign up now.</Link></p>
+                             <p className="login-text"> New to HeroFlix? <Link className="login-text-link" to="/signup">Sign up now.</Link></p>
                              {errors}
                         </form>
                         <div>
@@ -69,7 +69,7 @@ class SessionForm extends React.Component {
                 <div className="signup-page">
                     <div className="signup-header">
                         <div>
-                            <h1 className="loginNetflix"> Netflix </h1>
+                            <h1 className="loginNetflix"> HeroFlix </h1>
                         </div>
                         <Link className="login-text-link" to='/login'> <h2>Sign In</h2></Link>
                     </div>
@@ -77,7 +77,7 @@ class SessionForm extends React.Component {
                 <form className="signup-form">
                     <h1> Welcome Back!</h1> 
                     <br></br>
-                    <h1>Joining Netflix is easy.</h1>
+                    <h1>Joining HeroFlix is easy.</h1>
                             <input type='text' className="signup-input" value={this.state.username} placeholder="Enter your username" onChange={this.handleInput('username')}/>
                             <br className="loginbreak" ></br>
                             <input type='text' className="signup-input" value={this.state.email} placeholder="Enter your Email"  onChange={this.handleInput('email')}/>

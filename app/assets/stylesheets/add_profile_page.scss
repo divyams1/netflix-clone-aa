@@ -1,7 +1,7 @@
 .add-profile-container {
     background-color: black;
     color: white;
-  
+    height: 2000px;
 
 }
 .add-form-container {
@@ -71,4 +71,14 @@
     border-top: 2px solid gray;
     display: flex;
     justify-content: center;
+}
+
+.add-button-whole {
+    background-color: black;
+    color: gray;
+    border: none;
+}
+
+.profile-name-text-show {
+    color: gray;
 }

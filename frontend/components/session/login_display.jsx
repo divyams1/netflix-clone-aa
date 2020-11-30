@@ -4,7 +4,7 @@ export default () => {
     return (
         <div className ='login-page'>
                 <div>
-                    <h1 className="loginNetflix"> Netflix </h1>
+                    <h1 className="loginNetflix"> HeroFlix </h1>
                 </div>
                 <div className="login-container">
                     <div className = 'session-form'>
@@ -23,7 +23,7 @@ export default () => {
                             </label>
                             <br></br>
                             <button className="signin-btn signin-login-btn" onClick = {this.handleSubmit}> Sign In </button>
-                             <p className="login-text"> New to Netflix? <Link className="login-text-link" to="/signup">Sign up now.</Link></p>
+                             <p className="login-text"> New to HeroFlix? <Link className="login-text-link" to="/signup">Sign up now.</Link></p>
                         </form>
                         <div>
                            

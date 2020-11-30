@@ -1,7 +1,7 @@
 .profile-show {
     background-color: black;
     color: white; 
-    height: 1500px;
+    height: 2500px;
     margin: 0;
 }
 
@@ -54,4 +54,56 @@
 
 a {
     text-decoration: none;
+}
+.nav-bar-dropdown-text {
+    color: white; 
+    size: 10px;
+    margin-right: 10px;
+}
+
+.nav-bar-dropdown-image {
+    width: 20px;
+    height: 20px;
+}
+.nav-bar-dropdown-item {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-hover {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  right: 0;
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border: 1px solid grey;
+}
+
+.dropdown-hover:hover .dropdown-content {
+    display:block;
+}
+
+.single-div-dropdown {
+    background-color: black;
+}
+
+.sign-out-button {
+    color: white;
+    background-color: black;
+    border: none;
+
+}
+.account-button {
+    color: white;
+    background-color: black;
+    border: none;
+    border-top: 2px solid grey;
+    padding-top: 20px;
 }

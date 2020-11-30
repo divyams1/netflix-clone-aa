@@ -1,6 +1,8 @@
 import {connect} from 'react-redux';
 import { fetchProfile, fetchProfiles } from '../../actions/profile_actions';
+import { Logout} from '../../actions/session_actions';
 import ShowPageNavBar from './show_page_nav_bar';
+import {withRouter} from 'react-router-dom';
 
 const mSTP = (state, ownProps) => {
     return {
@@ -11,8 +13,9 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => {
     return {
-        fetchProfiles: () => dispatch(fetchProfiles())
+        fetchProfiles: () => dispatch(fetchProfiles()),
+        Logout: () => dispatch(Logout())
     }
 }
 
-export default connect(mSTP, mDTP)(ShowPageNavBar);
+export default withRouter(connect(mSTP, mDTP)(ShowPageNavBar));

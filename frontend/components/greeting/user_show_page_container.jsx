@@ -2,6 +2,7 @@ import {connect} from 'react-redux';
 import { fetchProfiles } from '../../actions/profile_actions';
 import UserShowPage from './user_show_page';
 import {Logout} from '../../actions/profile_actions';
+import {withRouter} from 'react-router-dom'
 
 const mSTP = (state, ownProps) => {
     return {
@@ -14,4 +15,4 @@ const mDTP = dispatch => ({
     Logout: () => () => dispatch(Logout())
 })
 
-export default connect(mSTP, mDTP)(UserShowPage);
+export default withRouter(connect(mSTP, mDTP)(UserShowPage));

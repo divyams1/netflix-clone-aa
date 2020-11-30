@@ -23,7 +23,7 @@ class CarouselRow extends React.Component {
         this.setState( { videos: this.state.videos})
     }
     render() {
-        const right = <FontAwesomeIcon icon={faChevronRight} />
+        const right = <FontAwesomeIcon icon={faChevronRight} size={'3x'} />
         const left = <FontAwesomeIcon icon={faChevronLeft} />
         const videos_to_render = this.state.videos.slice(0,6);
         const videos = videos_to_render.map( (video, idx) => {
@@ -32,22 +32,9 @@ class CarouselRow extends React.Component {
         return (
             <div className="carousel-row">
                 {videos}
-                <button onClick={this.shiftVideos}> {right} </button>
+                <button className="right-button-click" onClick={this.shiftVideos}> {right} </button>
             </div>
-        )
-        
-        // return(
-        //     <div className="carousel-container">
-        //         {display}
-        //     </div>
-        // )
-
-
-
-
-        
-
-      
+        ) 
     }
 }
 
@@ -60,3 +47,5 @@ export default CarouselRow;
     //             <img className="video-carousel" src={video.photoUrl} />
     //         </div>)
     //     })
+
+  

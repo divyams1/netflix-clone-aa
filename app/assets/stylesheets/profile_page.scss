@@ -18,6 +18,9 @@
 .profiles-col {
     display: flex;
     justify-content: space-around;
+    margin-left: 150px;
+    margin-right: 150px;
+    
 }
 
 .profile-image {
@@ -34,7 +37,8 @@
     text-decoration: none;
 }
 .button-div {
-    height: 100px;
+    height: 200px;
+    width: 200px;
 }
 .add-button-container {
     display: flex;
@@ -47,4 +51,8 @@
 }
 .add-prof-button {
     margin-top: 30px;
+}
+
+.who-watch {
+    font-size: 50px;
 }

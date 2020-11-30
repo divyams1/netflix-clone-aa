@@ -3,17 +3,27 @@ import React from 'react';
 class AddProfile extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { name: "", user_id: this.props.currentUser.id }
+        this.state = { profile: { name: "", user_id: this.props.currentUser.id }, count: 0 }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     update(field) {
-        return e => this.setState({name: e.currentTarget.value})
+        return e => this.setState({profile: {name: e.currentTarget.value, user_id: this.props.currentUser.id }})
+    }
+    componentDidMount() {
+        this.props.fetchProfiles();
     }
 
     handleSubmit(e)  {
         e.preventDefault();
-        this.props.createProfile(this.state)
-        this.props.toggleShow()
+        this.props.createProfile(this.state.profile)
+        const new_id = Object.values(this.props.profiles).length;
+        this.props.history.push(`/profiles/${new_id}`)
+
+    }
+
+    cancel(e) {
+        e.preventDefault();
+        this.props.history.push('/')
     }
 
 
@@ -21,7 +31,7 @@ class AddProfile extends React.Component {
     render() {
         return (
             <div className="add-profile-container">
-                <h1 className="netflix-text"> Netflix </h1>
+                <h1 className="netflix-text"> HeroFlix </h1>
                 <div className="add-form-container">
                     <div>
                         <h1 className="Add-prof-text"> Add Profile </h1>
@@ -29,11 +39,11 @@ class AddProfile extends React.Component {
                     </div>
                     <form className="add-form">
                         <img className="profile-image" src="https://ih0.redbubble.net/image.618427277.3222/flat,1000x1000,075,f.u2.jpg" />
-                        <input className="name-form-input" type='text' value={this.state.name} placeholder="Name" onChange={this.update('name')}></input>
+                        <input className="name-form-input" type='text' value={this.state.profile.name} placeholder="Name" onChange={this.update('name')}></input>
                     </form>
                     <div className="add-prof-bottom-button-cont">
                         <button className="cont-button" type="button" onClick={this.handleSubmit}>CONTINUE</button> 
-                        <button className="cancel-button" onClick={this.props.toggleShow}> CANCEL </button>
+                        <button className="cancel-button" onClick={this.props.cancel}> CANCEL </button>
                     </div>
                 </div>
             </div>

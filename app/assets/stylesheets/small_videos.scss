@@ -1,24 +1,45 @@
 .big-box {
-    height: 175px;
-    width: 300px;
+    // height: 175px;
+    // width: 300px;
+    // background-color: black;
+    // margin-right: 10px;
     background-color: black;
-    margin-right: 10px;
+    flex: 0 0 19.7%;
+    margin: 0 2px;
+    transition: transform 300ms ease 100ms;
+    height: 175px;
+    width: 285px;
 }
 .video-image {
     height: 175px;
-    width: 300px;
-    margin: 10px;
+    width: 285px;
+    // margin: 10px;
     border-radius: 10px;
+    flex: 0 0 19.7%;
+    margin: 0 2px;
+    transition: transform 300ms ease 100ms;
     
 }
 
 .big-video-image {
     display: none;
-    height: 350px;
-    width: 425px;
+    height: 175px;
+    width: 285px;
 
     margin: 0;
     padding: 0;
+}
+.big-box:hover .big-box {
+    transform: translateX(-25%);
+}
+
+.big-box:hover ~ .big-box {
+    transform: translateX(25%);
+}
+
+
+.big-box:hover {
+    transform: scale(1.5)
 }
 
 .big-box:hover .big-video-image {
@@ -26,6 +47,21 @@
     display: absolute;
     z-index: 1;
 }
+.big-box:hover .video-image {
+    display: none;
+}
+.big-box:hover .video-cont {
+    display: absolute;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+// .big-box:hover .big-video-image {
+//     display: block;
+//     display: absolute;
+//     z-index: 1;
+// }
 
 
 .video-cont {
@@ -33,27 +69,27 @@
 }
 
 
-.big-box:hover {
-    transition: .3s;
-    display: relative;
-    transition-delay: 1s;
-    height: 350px;
-    width: 425px;
-}
+// .big-box:hover {
+//     transition: .3s;
+//     display: relative;
+//     transition-delay: 1s;
+//     height: 350px;
+//     width: 425px;
+// }
 
-.big-box:hover .video-cont {
-    transition: .3s;
-    display: absolute;
-    transition-delay: 1s;
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-}
-.big-box:hover .video-image {
-    transition: .3s;
-    transition-delay: 1s;
-    display:none;
-}
+// .big-box:hover .video-cont {
+//     transition: .3s;
+//     display: absolute;
+//     transition-delay: 1s;
+//     display: flex;
+//     flex-direction: column;
+//     border-radius: 20px;
+// }
+// .big-box:hover .video-image {
+//     transition: .3s;
+//     transition-delay: 1s;
+//     display:none;
+// }
 
 .video-button {
     border-radius: 100px;

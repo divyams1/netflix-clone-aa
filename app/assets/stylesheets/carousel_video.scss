@@ -1,3 +1,15 @@
 .carousel-row {
-    display: flex 
+    display: flex;
+    padding: 0 30px; 
+}
+
+.right-button-click {
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+.carousel-row:hover .right-button-click{
+    display: block;
 }

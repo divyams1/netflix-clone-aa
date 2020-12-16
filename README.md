@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## HeroFlix is a video streaming service that allows users sign up, create induvidual profiles, and browse and watch videos. HeroFlix was built using a Rails backend, a PostgreSQL databse, and a fontend built on React-Redux. The site was hosted on Heroku, and video information was stored on Amazon Web Services.
 
-Things you may want to cover:
+[Heroflix](https://netflix-clone-a-a.herokuapp.com/)
 
-* Ruby version
 
-* System dependencies
+## Key Features:
+    * Account Creation
+    * Profile Creation
+    * Watch Videos that are sorted by Genre
 
-* Configuration
 
-* Database creation
+## Development Insights:
+    One of the most difficult challenges was giving users the ability to browse through videos. The main challenge was modifying the order of the videos displayed and finding a way to modify state. A solution to this was storing the videos in the component's state and rotating the array anytime the button to shift videos was clicked. 
 
-* Database initialization
+    ![alt text](https://gyazo.com/17e225235dc4d5cdb37c187529c57f4d)
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+
+
+# Future Directions 

@@ -10,18 +10,18 @@ class CarouselRow extends React.Component {
         super(props)
         this.state = { videos: Object.values(this.props.videos)}
         this.shiftVideos = this.shiftVideos.bind(this);
-        // const videos_copy = Object.values(this.props.videos).slice()
-        // this.state = { big_vids : videos_copy.concat( videos_copy.reverse() ).concat(Object.values(this.props.videos)) } 
     }
+    shiftVideos() {
+        this.state.videos.push( this.state.videos.shift() )
+        this.setState( { videos: this.state.videos})
+    }
+
 
     componentDidMount() {
         this.props.fetchVideos();
     }
 
-    shiftVideos() {
-        this.state.videos.push( this.state.videos.shift() )
-        this.setState( { videos: this.state.videos})
-    }
+  
     render() {
         const right = <FontAwesomeIcon icon={faChevronRight} size={'3x'} />
         const left = <FontAwesomeIcon icon={faChevronLeft} />

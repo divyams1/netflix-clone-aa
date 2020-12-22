@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default () => {
+     
     return (
         <div className ='login-page'>
                 <div>
@@ -9,7 +10,7 @@ export default () => {
                 <div className="login-container">
                     <div className = 'session-form'>
                         <form>
-                            <h1 className="login-text"> Sign In </h1>
+                            <h1 className="login-page-text"> Sign In </h1>
                             <label>
                                 <input type='text' className="login-input"  placeholder="Enter your username" value={this.state.username} onChange={this.handleInput('username')}/>
                             </label>

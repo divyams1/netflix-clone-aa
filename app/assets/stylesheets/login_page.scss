@@ -10,8 +10,8 @@
 }
 .session-form {
     background-color: black;
-    height: 400px; 
-    width: 25%;
+    height: 550px; 
+    width: 22%;
     display: flex;
     justify-content: center;
     opacity: .8;
@@ -27,7 +27,7 @@
     font-weight: 300;
 }
 
-.login-text {
+.login-page-text {
     color: white;
 }
 
@@ -36,10 +36,12 @@
   
     justify-content: center;
 }
+ .login-input {
+     height: 25px;
+     width: 87%;
+     margin-bottom: 10px;
+ }
 
-.login-text {
-    color: gray;
-}
 
 .login-text-link {
     color: white;
@@ -55,4 +57,18 @@
 
 .page {
     height: 100%;
+}
+
+.error-text {
+    color: white;
+    font-size: small;
+    text-align: center;
+}
+
+.error-container {
+    background-color: orange;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
 }

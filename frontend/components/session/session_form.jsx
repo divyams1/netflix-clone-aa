@@ -20,6 +20,7 @@ class SessionForm extends React.Component {
         const user = Object.assign({}, this.state);
         this.props.processForm(user)
             .then(  (user) => this.props.history.push(`/`))
+            
     }
 
     handleInput(field) {
@@ -29,11 +30,13 @@ class SessionForm extends React.Component {
     }
 
     render() {
-        const errors = this.props.errors.map( error => {
-            <div>
-                <p> error </p>
-            </div>
+       
+        const errors =  this.props.errors.map( error => {
+            return (<div className="error-container">
+                <p className="error-text"> {error} </p>
+            </div>) 
         })
+        
         const display = ( (this.props.formType === 'login') ? (
             <div className ='login-page'>
                 <div>
@@ -42,10 +45,12 @@ class SessionForm extends React.Component {
                 <div className="login-container">
                     <div className = 'session-form'>
                         <form>
-                            <h1 className="login-text"> Sign In </h1>
+                            <h1 className="login-page-text"> Sign In </h1>
+                            { errors[0] }
                             <label>
                                 <input type='text' className="login-input"  value={this.state.username} placeholder="Enter your username" onChange={this.handleInput('username')}/>
                             </label>
+                            
                             <br></br>
                             <label>
                                 <input type='text' className="login-input"  value={this.state.email } placeholder="Enter your Email" onChange={this.handleInput('email')}/>
@@ -56,8 +61,8 @@ class SessionForm extends React.Component {
                             </label>
                             <br></br>
                             <button className="signin-btn signin-login-btn" onClick = {this.handleSubmit}> Sign In </button>
-                             <p className="login-text"> New to HeroFlix? <Link className="login-text-link" to="/signup">Sign up now.</Link></p>
-                             {errors}
+                             <p className="login-page-text"> New to HeroFlix? <Link className="login-text-link" to="/signup">Sign up now.</Link></p>
+                             
                         </form>
                         <div>
                            
@@ -93,7 +98,7 @@ class SessionForm extends React.Component {
           return (
               <div>
                   {display}
-                  {this.props.errors}
+                  
               </div>
           )  
         }

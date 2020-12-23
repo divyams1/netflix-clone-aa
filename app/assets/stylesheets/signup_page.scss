@@ -23,7 +23,8 @@
 }
 
 .signup-big-text {
-    font-weight: 900;
+    font-weight: bold;
+    font-size: 25px;
     margin: 0px;
     margin-bottom: 3px;
 }
@@ -37,10 +38,30 @@
 }
 
 .email-text-title {
+    font-weight: normal;
     margin-bottom: 0px;
 }
 
 .signup-input {
     height: 40px;
     margin-bottom: 20px;
+    width: 96%;
+  
+}
+
+.signup-small-text {
+    font-weight: normal;
+}
+
+.signup-btn-last {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: red;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    height: 50px;
+    padding-right: 0;
+    padding-left: 0;
 }

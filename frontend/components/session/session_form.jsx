@@ -8,17 +8,16 @@ import { Link, Redirect } from 'react-router-dom';
 class SessionForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            username: '',
-            password: '',
-            email: this.props.match.params.email
-        }
+        const newState = ( this.props.formType === 'login'? { username: '', password: '', email: ''} : { username: this.props.match.params.email, password: '', email: this.props.match.params.email} )
+        this.state = newState
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
+        user.username = user.email; 
+        debugger
         this.props.processForm(user)
             .then(  (user) => this.props.history.push(`/`))
             
@@ -48,9 +47,6 @@ class SessionForm extends React.Component {
                         <form>
                             <h1 className="login-page-text"> Sign In </h1>
                             { errors[0] }
-                            <label>
-                                <input type='text' className="login-input"  value={this.state.username} placeholder="Enter your username" onChange={this.handleInput('username')}/>
-                            </label>
                             <br></br>
                             <label>
                                 <input type='text' className="login-input"  value={this.state.email } placeholder="Enter your Email" onChange={this.handleInput('email')}/>
@@ -82,14 +78,13 @@ class SessionForm extends React.Component {
                 <form className="signup-form">
                     <h1 className="signup-big-text first-sign-up"> Welcome Back!</h1> 
                     <h1 className="signup-big-text">Joining HeroFlix is easy.</h1>
-                    <h3> Enter your password and you'll be watching in no time.</h3>
+                    <h3 className="signup-small-text"> Enter your password and you'll be watching in no time.</h3>
                             <h4 className="email-text-title"> Email </h4>
                             <p className="email-text"> {this.state.email} </p>
-                            <input type='text' className="signup-input" value={this.state.username} placeholder="Enter your username" onChange={this.handleInput('username')}/>
                             <br className="loginbreak" ></br>
                             <input type='password' className="signup-input" value={this.state.password} placeholder="Enter your password" onChange={this.handleInput('password')}/>
                             <br className="loginbreak"></br>
-                        <button className="signin-btn signin-login-btn" onClick = {this.handleSubmit}> Continue </button>
+                        <button className="signup-btn-last" onClick = {this.handleSubmit}> CONTINUE </button>
                         {errors}
                     </form>
                 </div>

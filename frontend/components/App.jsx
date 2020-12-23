@@ -8,6 +8,7 @@ import DemoContainer from './greeting/demo_container';
 import ProfileContainer from "./profile/profile_container";
 import VideoShowContainer from './video/video_show_container'
 import AddProfileContainer from './greeting/add_profile_container';
+import SignUpNoEmailContainer from './session/sign_up_no_email_container';
 
 const App = () => {
     return (<div className="page">
@@ -19,6 +20,7 @@ const App = () => {
         <Route path='/profiles/:profileId' exact component={ProfileContainer} />
         <Route path='/videos/:videoId' exact component={VideoShowContainer} />
         <Route path='/add' exact component={AddProfileContainer} />
+        <Route path="/signup" exact component={SignUpNoEmailContainer} />
     </div>)
 };
 

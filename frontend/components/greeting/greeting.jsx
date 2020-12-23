@@ -3,7 +3,7 @@ import { Link} from 'react-router-dom';
 import DropDown from './drop_down'
 import UserShowPage from './user_show_page_container'
 import {Login} from '../../actions/profile_actions';
-
+import SignUpFormContainer from './sign_up_form_container'
 const demo = () => {
     const demo_user = { username: 'demo', email: 'demo', password:'hunter2'};
     return () => dispatch(Login(demo_user));
@@ -35,7 +35,9 @@ const Greeting = ({currentUser, profiles, fetchProfiles, logout}) => {
                     <h1 className="greeting-header"> Unlimited movies, TV shows, and more.</h1>
                     <h3 className="greeting-subtext1"> Watch anywhere. Cancel anytime.</h3>
                     <h3 className="greeting-subtext2"> Ready to watch? Enter your email to create or restart your membership</h3>
-                    <Link className="btn signin-btn" to="/signup">  Sign Up</Link>
+                    <div>
+                        <SignUpFormContainer />
+                    </div>
                     
                     </div>
                     <div></div>

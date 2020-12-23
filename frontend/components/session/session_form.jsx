@@ -10,7 +10,8 @@ class SessionForm extends React.Component {
         super(props);
         this.state = {
             username: '',
-            password: ''
+            password: '',
+            email: this.props.match.params.email
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -50,7 +51,6 @@ class SessionForm extends React.Component {
                             <label>
                                 <input type='text' className="login-input"  value={this.state.username} placeholder="Enter your username" onChange={this.handleInput('username')}/>
                             </label>
-                            
                             <br></br>
                             <label>
                                 <input type='text' className="login-input"  value={this.state.email } placeholder="Enter your Email" onChange={this.handleInput('email')}/>
@@ -80,16 +80,16 @@ class SessionForm extends React.Component {
                     </div>
                 <div className="signup-form-container">
                 <form className="signup-form">
-                    <h1> Welcome Back!</h1> 
-                    <br></br>
-                    <h1>Joining HeroFlix is easy.</h1>
+                    <h1 className="signup-big-text"> Welcome Back!</h1> 
+                    <h1 className="signup-big-text">Joining HeroFlix is easy.</h1>
+                    <h4> Enter your password and you'll be watching in no time.</h4>
+                            <h2> Email: </h2>
+                            <p className="email-text"> {this.state.email} </p>
                             <input type='text' className="signup-input" value={this.state.username} placeholder="Enter your username" onChange={this.handleInput('username')}/>
-                            <br className="loginbreak" ></br>
-                            <input type='text' className="signup-input" value={this.state.email} placeholder="Enter your Email"  onChange={this.handleInput('email')}/>
                             <br className="loginbreak" ></br>
                             <input type='password' className="signup-input" value={this.state.password} placeholder="Enter your password" onChange={this.handleInput('password')}/>
                             <br className="loginbreak"></br>
-                        <button className="signin-btn signin-login-btn" onClick = {this.handleSubmit}> Sign Up </button>
+                        <button className="signin-btn signin-login-btn" onClick = {this.handleSubmit}> Continue </button>
                         {errors}
                     </form>
                 </div>

@@ -8,6 +8,7 @@ class VideoShow extends React.Component {
         this.toggleShow = this.toggleShow.bind(this);
     }
     componentDidMount() {
+        debugger 
         this.props.fetchVideo( this.props.match.params.videoId );
     }
 

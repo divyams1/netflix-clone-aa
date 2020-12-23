@@ -14,7 +14,7 @@ const App = () => {
         
         <Route path='/' exact component={GreetingContainer} />
         <Route path="/login" exact  component={LoginFormContainer} />
-        <Route path="/signup" exact component={SignupFormContainer} />
+        <Route path="/signup/:email" exact component={SignupFormContainer} />
         <Route path='/demo' exact component={DemoContainer} />
         <Route path='/profiles/:profileId' exact component={ProfileContainer} />
         <Route path='/videos/:videoId' exact component={VideoShowContainer} />

@@ -80,10 +80,10 @@ class SessionForm extends React.Component {
                     </div>
                 <div className="signup-form-container">
                 <form className="signup-form">
-                    <h1 className="signup-big-text"> Welcome Back!</h1> 
+                    <h1 className="signup-big-text first-sign-up"> Welcome Back!</h1> 
                     <h1 className="signup-big-text">Joining HeroFlix is easy.</h1>
-                    <h4> Enter your password and you'll be watching in no time.</h4>
-                            <h2> Email: </h2>
+                    <h3> Enter your password and you'll be watching in no time.</h3>
+                            <h4 className="email-text-title"> Email </h4>
                             <p className="email-text"> {this.state.email} </p>
                             <input type='text' className="signup-input" value={this.state.username} placeholder="Enter your username" onChange={this.handleInput('username')}/>
                             <br className="loginbreak" ></br>

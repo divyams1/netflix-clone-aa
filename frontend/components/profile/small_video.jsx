@@ -12,6 +12,7 @@ class SmallVideo extends React.Component {
 
     playClick() {
         this.props.history.push(`/videos/${this.props.video.id}`)
+        debugger 
     }
     render() {
         

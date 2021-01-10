@@ -43,7 +43,7 @@ class AddProfile extends React.Component {
                     </form>
                     <div className="add-prof-bottom-button-cont">
                         <button className="cont-button" type="button" onClick={this.handleSubmit}>CONTINUE</button> 
-                        <button className="cancel-button" onClick={this.props.cancel}> CANCEL </button>
+                        <button className="cancel-button" onClick={e => this.cancel(e)}> CANCEL </button>
                     </div>
                 </div>
             </div>

@@ -7,10 +7,19 @@
     position: relative;
     right: 0;
     top: 0;
-
+  background-color: black;
 }
 
+
 .show-video-title {
+  position: absolute;
+  top: 0%;
+  background-color: transparent;
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+.show-video-desc {
   position: absolute;
   top: 0%;
   background-color: transparent;

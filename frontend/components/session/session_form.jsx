@@ -17,7 +17,7 @@ class SessionForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         user.username = user.email; 
-        debugger
+        
         this.props.processForm(user)
             .then(  (user) => this.props.history.push(`/`))
             
@@ -34,6 +34,11 @@ class SessionForm extends React.Component {
         const errors =  this.props.errors.map( error => {
             return (<div className="error-container">
                 <p className="error-text"> {error} </p>
+            </div>) 
+        })
+        const signinErrors =  this.props.errors.map( error => {
+            return (<div className="error-container">
+                <p className="error-text-sign-in"> {error} </p>
             </div>) 
         })
         
@@ -83,9 +88,10 @@ class SessionForm extends React.Component {
                             <p className="email-text"> {this.state.email} </p>
                             <br className="loginbreak" ></br>
                             <input type='password' className="signup-input" value={this.state.password} placeholder="Enter your password" onChange={this.handleInput('password')}/>
+                            {signinErrors}
                             <br className="loginbreak"></br>
                         <button className="signup-btn-last" onClick = {this.handleSubmit}> CONTINUE </button>
-                        {errors}
+                        
                     </form>
                 </div>
             </div>
@@ -98,6 +104,6 @@ class SessionForm extends React.Component {
           )  
         }
 
-}
+    }
 
 export default SessionForm;

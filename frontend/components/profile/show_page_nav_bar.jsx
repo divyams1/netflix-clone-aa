@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faSearch, faGift, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faGift, faCaretDown, faLink } from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom';
 class ShowPageNavBar extends React.Component {
     constructor(props) {
@@ -20,7 +20,8 @@ class ShowPageNavBar extends React.Component {
     }
 
     render() {
-        
+        const git = <img className="link-icon github" alt="icon" src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" height={30} width={30}></img>;
+         const link = <img  className="link-icon linked" alt="icon" src="https://pngmind.com/wp-content/uploads/2019/08/Linkedin-Logo-Png-Transparent-Background.png" width={30} height = {30} margin-top= {20} ></img>
         const search = <FontAwesomeIcon icon={faSearch} />
         const gift = <FontAwesomeIcon icon={faGift} />
         const down = <FontAwesomeIcon icon={faCaretDown} />
@@ -44,13 +45,15 @@ class ShowPageNavBar extends React.Component {
         <div className="nav-bar-show">
             <div className="nav-bar-left">
                 <h1 className="netflix-text netflix-text-navbar"> HeroFlix </h1>
-                <h2 className="nav-bar-item"> https://github.com/divyams1 </h2>
+                <a href="https://github.com/divyams1"> {git} </a>
+                {/* <h2 className="nav-bar-item"> https://github.com/divyams1 </h2> */}
                 {/* <h2 className="nav-bar-item"> TV Shows </h2>
                 <h2 className="nav-bar-item"> New And Popular</h2>
                 <h2 className="nav-bar-item"> My List </h2> */}
             </div>
             <div className="nav-bar-right">
-                <h2 className="nav-bar-item"> https://www.linkedin.com/in/divyam-satyarthi-b6628513b/ </h2>
+                <a href="https://www.linkedin.com/in/divyam-satyarthi-b6628513b/"> {link} </a>
+                {/* <h2 className="nav-bar-item"> https://www.linkedin.com/in/divyam-satyarthi-b6628513b/ </h2> */}
                 {/* <h2 className="nav-bar-item"> KIDS </h2>
                 <h2 className="nav-bar-item"> DVD </h2>
                 <h2 className="nav-bar-item">{gift}</h2> */}

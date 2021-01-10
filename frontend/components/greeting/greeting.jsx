@@ -23,7 +23,7 @@ const Greeting = ({currentUser, profiles, fetchProfiles, logout}) => {
         <div>
             <div className="top-greeting-box">
                 <div className="login-bar">
-                    <h1> HeroFlix </h1>
+                    <h1 className="greeting-left"> HeroFlix </h1>
                     <div className="sign-in-demo">
                     <Link className="btn signin-btn" to="/login">Sign In</Link>
                     <Link className="btn signin-btn" to="/demo" > Demo</Link>

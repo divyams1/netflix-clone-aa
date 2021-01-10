@@ -17,7 +17,7 @@ class MainVideo extends React.Component {
         this.props.history.push('/videos/0')
     }
     render() {
-        
+         
         const play = <FontAwesomeIcon icon={faPlay} />
         const info = <FontAwesomeIcon icon={faInfoCircle} />
         const display = (Object.keys(this.props.videos).length > 0 ? (   

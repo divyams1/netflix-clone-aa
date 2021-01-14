@@ -27,3 +27,12 @@
   width: 100%;
   padding: 20px;
 }
+
+.backbutton {
+  position: absolute; 
+  top: 20%; 
+  color: white; 
+  width: 20%;
+  height: 20%;
+  z-index: 10;
+}

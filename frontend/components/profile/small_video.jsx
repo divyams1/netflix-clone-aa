@@ -11,20 +11,25 @@ class SmallVideo extends React.Component {
     }
 
     playClick() {
+        
         this.props.history.push(`/videos/${this.props.video.id}`)
-        debugger 
+        
     }
     render() {
+
         
+        const video = this.state.hovered? (   <video onMouseLeave={ ()=> this.setState({ hovered: false }) } onMouseEnter={ () => this.setState({hovered:true}) } className="big-video-image" autoPlay muted  >
+                            <source src={this.props.video.videoUrl} type="video/mp4" />
+                        </video>): (  <video onMouseLeave={ ()=> this.setState({ hovered: false }) } onMouseEnter={ () => this.setState({hovered:true}) } className="big-video-image" ended="true" muted  >
+                            <source src={this.props.video.videoUrl} type="video/mp4" />
+                        </video>)
         const play = <FontAwesomeIcon icon={faPlayCircle} />
         const plus = <FontAwesomeIcon icon={faPlusCircle} />
         const down = <FontAwesomeIcon icon={faChevronDown} />
         const box = ( <div className="big-box">
                    <img className="video-image" src={this.props.video.photoUrl} />
                     <div className="video-cont">
-                        <video onMouseLeave={ ()=> this.setState({ hovered: false }) } className="big-video-image" autoPlay muted  >
-                            <source src={this.props.video.videoUrl} type="video/mp4" />
-                        </video>
+                        {video}
                         <div className="button-list">
                         <div className="left-buttons">
                             <button onClick={this.playClick} className="video-button" > {play}  </button>

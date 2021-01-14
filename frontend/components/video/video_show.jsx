@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlayCircle, faPlusCircle, faChevronDown, faArrowLeft  } from '@fortawesome/free-solid-svg-icons';
+import { faPlayCircle, faPlusCircle, faChevronDown, faArrowLeft  , faChevronLeft} from '@fortawesome/free-solid-svg-icons';
 
 class VideoShow extends React.Component {
 
@@ -11,8 +11,8 @@ class VideoShow extends React.Component {
     }
     componentDidMount() {
         
-        this.props.fetchVideo( this.props.match.params.videoId );
-        
+        this.props.fetchVideo( (this.props.match.params.videoId) );
+        this.props.fetchVideos();
     }
 
     toggleShow() {
@@ -29,12 +29,12 @@ class VideoShow extends React.Component {
 
     render() {
         
-
-        const video = this.props.video
-      
-        const back = <FontAwesomeIcon onClick={this.back} icon={faArrowLeft} />
-        const videoTitle = video.title || ""
-        const videoDescrpition = video.description || ""
+        
+        const video = this.props.video || { title: "" , description: '', videoUrl: ''}
+        const backImage = <img src="https://www.kindpng.com/picc/m/597-5978257_transparent-arrow-png-transparent-background-png-icon-back.png" className="backbutton"></img>
+        const back = <FontAwesomeIcon onClick={this.back} icon={faChevronLeft} className="backbutton" />
+        const videoTitle = video.title 
+        const videoDescrpition = video.description 
         const title =  (this.state.show ? (    <div className="show-video-title">
                         <h1> {videoTitle} </h1>
                     </div>): <div></div>);
@@ -48,7 +48,7 @@ class VideoShow extends React.Component {
                 <video className="show-video" controls onClick={this.toggleShow}>
                      <source src={video.videoUrl} />
                 </video>
-                    {back}
+                    {backImage}
                     {title}
                     {description}
                 </div>

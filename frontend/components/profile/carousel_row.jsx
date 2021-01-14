@@ -26,7 +26,9 @@ class CarouselRow extends React.Component {
         const right = <FontAwesomeIcon icon={faChevronRight} size={'3x'} />
         const left = <FontAwesomeIcon icon={faChevronLeft} />
         const videos_to_render = this.state.videos.slice(0,6);
+        
         const videos = videos_to_render.map( (video, idx) => {
+          
             return <SmallVideoContainer key={idx} video={video} />
         })
         return (

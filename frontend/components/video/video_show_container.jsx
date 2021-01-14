@@ -4,17 +4,15 @@ import VideoShow from './video_show'
 import {withRouter} from 'react-router-dom'
 
 const mSTP = (state,ownProps) => {
-    debugger
     return {
-        video: state.entities.videos[ownProps.match.params.videoId],
-        videos:  state.entities.videos
+        video: state.entities.videos[ownProps.match.params.videoId]
     }
 }
 
 const mDTP = dispatch => {
     return {
         fetchVideo: (videoId) => dispatch(fetchVideo(videoId)),
-        fetchVideos: () => dispatch(fetchVideos())
+        // fetchVideos: () => dispatch(fetchVideos())
     }
 }
 

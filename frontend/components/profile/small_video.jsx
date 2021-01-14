@@ -28,7 +28,7 @@ class SmallVideo extends React.Component {
         const down = <FontAwesomeIcon icon={faChevronDown} />
         const box = ( <div className="big-box">
                    <img className="video-image" src={this.props.video.photoUrl} />
-                    <div className="video-cont">
+                    <div className="video-cont" key={this.props.video.videoUrl}>
                         {video}
                         <div className="button-list">
                         <div className="left-buttons">

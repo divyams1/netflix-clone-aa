@@ -7,8 +7,7 @@ const videosReducer = (state={}, action) => {
         case RECEIVE_ALL_VIDEOS:
             return Object.assign({},action.videos);
         case RECEIVE_VIDEO:
-            debugger
-            const new_state = Object.assign({}, state, { [action.video.id]: action.video})
+            const new_state = Object.assign({}, { [action.video.id]: action.video})
             return new_state; 
         default:
             return state; 

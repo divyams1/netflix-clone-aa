@@ -37,16 +37,16 @@ class SmallVideo extends React.Component {
                         </div>
                         <div className="right-buttons">
                             <button className="video-button"> {down} </button>
-                        </div>
+                        </div> 
                     </div>
             </div>
         </div>)
      
         
         return (
-            <div>
+            <React.Fragment>
                 {box}
-            </div>
+            </React.Fragment>
         )
     }
 }

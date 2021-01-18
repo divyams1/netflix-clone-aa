@@ -14,22 +14,24 @@ class MainVideo extends React.Component {
     }
 
     playClick() {
-        this.props.history.push('/videos/0')
+        this.props.history.push('/videos/1')
     }
     render() {
          
         const play = <FontAwesomeIcon icon={faPlay} />
         const info = <FontAwesomeIcon icon={faInfoCircle} />
-        const display = (Object.keys(this.props.videos).length > 0 ? (   
+        const display = (Object.values(this.props.videos).length > 1 ? (   
                 <div className="myVideo">
-                    <video className="myVideo"  autoPlay>
-                        <source src={this.props.videos[0].videoUrl} type="video/mp4" />
+                    <video className="myVideo"  >
+                        <source src={Object.values(this.props.videos)[0].videoUrl} type="video/mp4" autoPlay />
                     </video>
                     <div className="content">
-                        <h1 className="big-video-title">{this.props.videos[0].title}</h1>
-                        <h2 className="big-video-desc">{this.props.videos[0].description}</h2>
-                        <button className="play-vid-button" onClick={this.playClick} > {play} Play </button>
-                        <button className="info-vid-button"> {info} More Info </button>
+                        <h1 className="big-video-title">{Object.values(this.props.videos)[0].title}</h1>
+                        <h2 className="big-video-desc">{Object.values(this.props.videos)[0].description}</h2>
+                        <div className="main-video-buttons">
+                            <button className="play-vid-button" onClick={this.playClick} > {play} Play </button>
+                            <button className="info-vid-button"> {info} More Info </button>
+                        </div>
                     </div>
                 </div>)
                  : ( <div></div>) )

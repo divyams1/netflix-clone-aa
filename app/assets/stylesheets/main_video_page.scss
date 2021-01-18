@@ -8,39 +8,40 @@
 
 .content {
   position: absolute;
-  top: 40%;
+  top: 15%;
   background-color:	transparent;
   color: #f1f1f1;
-  width: 100%;
+  width: 80%;
   padding: 20px;
+  margin-bottom: 20%;
 }
 
 .big-video-title {
   width: 30%;
-  font-size: 50px;
+  font-size: 250%;
 }
 .big-video-desc {
   width: 30%;
-  font-size: 20px;
+  font-size: 125%;
 }
 
 .play-vid-button {
-  width: 100px;
-  height: 45px;
+  width: 6%;
+  height: 40px;
   border-radius: 5px;
   border: none;
   background: white;
-  margin-right: 20px;
-  font-size: 16px;
+  margin-right: 2%;
+  font-size: 80%;
 }
 .info-vid-button {
-  width: 130px; 
-  height: 45px;
+  width: 6%; 
+  height: 40px;
   border-radius:  5px;
   border: none; 
   background: gray;
   color: white; 
-  font-size: 16px;
+  font-size: 80%;
   
 }
 
@@ -54,4 +55,9 @@
 
 .github {
   margin-left: 40px;
+}
+
+.main-video-buttons {
+  display: flex; 
+  align-items: center;
 }

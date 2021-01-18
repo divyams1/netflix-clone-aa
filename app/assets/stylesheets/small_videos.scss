@@ -7,12 +7,12 @@
     flex: 0 0 19.7%;
     margin: 0 2px;
     transition: transform 300ms ease 100ms;
-    height: 175px;
-    width: 285px;
+    height: 75%;
+    width: 3%;
 }
 .video-image {
-    height: 175px;
-    width: 285px;
+    width: 150px; 
+    height: 150px;
     // margin: 10px;
     border-radius: 10px;
     flex: 0 0 19.7%;
@@ -23,20 +23,20 @@
 
 .big-video-image {
     display: none;
-    height: 175px;
-    width: 285px;
+    height: 100%;
+    width: 100%;
 
     margin: 0;
     padding: 0;
 }
 .big-box:hover .big-box {
-    transform: translateX(-25%);
+    transform: translateX(-20%);
 }
 
-.big-box:hover ~ .big-box {
-    transform: translateX(25%);
-}
 
+.video-cont {
+    display: none;
+}
 
 .big-box:hover {
     transform: scale(1.5)
@@ -57,11 +57,11 @@
     border-radius: 20px;
 }
 
-// .big-box:hover .big-video-image {
-//     display: block;
-//     display: absolute;
-//     z-index: 1;
-// }
+.big-box:hover .big-video-image {
+    display: block;
+    display: absolute;
+    z-index: 1;
+}
 
 
 .video-cont {
@@ -69,27 +69,7 @@
 }
 
 
-// .big-box:hover {
-//     transition: .3s;
-//     display: relative;
-//     transition-delay: 1s;
-//     height: 350px;
-//     width: 425px;
-// }
 
-// .big-box:hover .video-cont {
-//     transition: .3s;
-//     display: absolute;
-//     transition-delay: 1s;
-//     display: flex;
-//     flex-direction: column;
-//     border-radius: 20px;
-// }
-// .big-box:hover .video-image {
-//     transition: .3s;
-//     transition-delay: 1s;
-//     display:none;
-// }
 
 .video-button {
     border-radius: 100px;
@@ -112,5 +92,8 @@
 }
 
 .carousel-whole {
+    margin-top: 3%;
     background-color: black;
+    width: 75%;
+    margin-left: 3%;
 }

@@ -5,14 +5,16 @@ import {withRouter} from 'react-router-dom'
 
 const mSTP = (state,ownProps) => {
     return {
-        video: state.entities.videos[ownProps.match.params.videoId]
+        videos: state.entities.videos,
+        profiles: Object.values(state.entities.profiles).filter( profile => profile.user_id === state.session.id ),
+        
     }
 }
 
 const mDTP = dispatch => {
     return {
         fetchVideo: (videoId) => dispatch(fetchVideo(videoId)),
-        // fetchVideos: () => dispatch(fetchVideos())
+        fetchVideos: () => dispatch(fetchVideos())
     }
 }
 

@@ -10,7 +10,8 @@ const mSTP = (state,ownProps) => {
     return {
         currentUser: state.entities.users[state.session.id],
         profiles: state.entities.profiles,
-        genres: state.entities.genres
+        genres: state.entities.genres,
+        profileId: ownProps.match.params.profileId
     }
 }
 

@@ -2,18 +2,21 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlayCircle, faPlusCircle, faChevronDown, faArrowLeft  , faChevronLeft} from '@fortawesome/free-solid-svg-icons';
 
+
 class VideoShow extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = { show: true , video: { title: "" , description: '', videoUrl: ''} }
         this.toggleShow = this.toggleShow.bind(this);
+        
+        this.back = this.back.bind(this);
     }
     componentDidMount() {
         
-       this.props.fetchVideo( (this.props.match.params.videoId) );
-       this.state.video = this.props.video;
-       debugger
+       this.props.fetchVideos();
+       
+    
     }
 
     toggleShow() {
@@ -25,36 +28,42 @@ class VideoShow extends React.Component {
     }
 
     back() {
-        this.props.history.push('/')
+        const profileId = this.props.profiles[0].id
+        this.props.fetchVideos();
+        
+        this.props.history.push(`/profiles/${profileId}`)
     }
 
     render() {
-        
-        const video = this.props.video || { title: "" , description: '', videoUrl: ''}
-    
-        // const back = <FontAwesomeIcon onClick={this.back} icon={faChevronLeft} className="backbutton" />
+        let video = this.props.videos || { title: "" , description: '', videoUrl: ''}
+        const vid_render = Object.values(this.props.videos).filter( video => {
+            return video.id === parseInt(this.props.match.params.videoId )
+        })
+        vid_render.length > 0 ? ( video = vid_render[0]): video;
         const videoTitle = video.title 
         const videoDescrpition = video.description 
-        const title =  (this.state.show ? (    <div className="show-video-title">
-                        <h1> {videoTitle} </h1>
-                    </div>): <div></div>);
+        const videoUrl = video.videoUrl
+        // const title =  (this.state.show ? (    <div className="show-video-title">
+        //                 <h1> {videoTitle} </h1>
+        //             </div>): <div></div>);
         const description = ( this.state.show? ( <div className="show-video-desc">
-            <h1> {video.title} </h1>
-            <p> {videoDescrpition} </p>
+            <FontAwesomeIcon onClick={this.back} icon={faChevronLeft} className="backbutton" />
+            <br className="height-div"></br>
+            <h1> {videoTitle} </h1>
+            <p> {videoTitle} </p>
         </div>) : (<div></div>))
         
-        const display = ( this.props.video?   (
-            <div key={video.videoUrl}>
+        const display = ( this.props.videos?   (
+            <div key={videoTitle}>
                 <video className="show-video"  controls onClick={this.toggleShow}>
-                     <source src={video.videoUrl} />
+                     <source src={videoUrl} />
                 </video>
                     {/* {backImage} */}
-                    {title}
+                    {/* {title} */}
                     {description}
                 </div>
                 
             ) : <div></div> )
-            debugger
         return (
         <div className="show-video">
           {display}

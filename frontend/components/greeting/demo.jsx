@@ -21,7 +21,7 @@ class Demo extends React.Component {
                 <div className="login-container">
                     <div className = 'session-form'>
                         <form>
-                            <h1 className="login-text"> Sign In </h1>
+                            <h1 className="demo-login-text"> Sign In </h1>
                             <label>
                                 <input type='text' readOnly className="login-input"  value="demo@gmail.com" />
                             </label>
@@ -32,7 +32,7 @@ class Demo extends React.Component {
                             </label>
                             <br></br>
                             <button className="signin-btn signin-login-btn" onClick = {this.handleSubmit}> Sign In </button>
-                             <p className="login-text"> New to Heroflix? <Link className="login-text-link" to="/signup">Sign up now.</Link></p>
+                             <p className="demo-login-text"> New to Heroflix? <Link className="login-text-link" to="/signup">Sign up now.</Link></p>
                         </form>
                         <div>
                            

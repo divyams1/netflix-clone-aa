@@ -23,7 +23,7 @@ class MainVideo extends React.Component {
         const display = (Object.values(this.props.videos).length > 1 ? (   
                 <div className="myVideo">
                     <video className="myVideo"  >
-                        <source src={Object.values(this.props.videos)[0].videoUrl} type="video/mp4" autoPlay />
+                        <source src={Object.values(this.props.videos)[0].videoUrl} type="video/mp4" autoPlay muted />
                     </video>
                     <div className="content">
                         <h1 className="big-video-title">{Object.values(this.props.videos)[0].title}</h1>

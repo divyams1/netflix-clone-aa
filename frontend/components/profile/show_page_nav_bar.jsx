@@ -7,6 +7,7 @@ class ShowPageNavBar extends React.Component {
         super(props)
         this.signOut = this.signOut.bind(this);
         this.profilePage = this.profilePage.bind(this);
+        this.state = { search: false , titleSearch: false, currentSearch: '' }
     }
     signOut(e) {
         e.preventDefault();
@@ -22,8 +23,8 @@ class ShowPageNavBar extends React.Component {
     render() {
         const git = <img className="link-icon github" alt="icon" src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" height={30} width={30}></img>;
          const link = <img  className="link-icon linked" alt="icon" src="https://pngmind.com/wp-content/uploads/2019/08/Linkedin-Logo-Png-Transparent-Background.png" width={30} height = {30} margin-top= {20} ></img>
-        const search = <FontAwesomeIcon icon={faSearch} />
-        const gift = <FontAwesomeIcon icon={faGift} />
+        const search = <FontAwesomeIcon icon={faSearch} size={'2x'} />
+        // const searchBar = <input className="search-bar" placeholder={`${search} Search Titles`} type="text"></input>
         const down = <FontAwesomeIcon icon={faCaretDown} />
         const profiles_drop = Object.keys(this.props.profiles).length > 0 ? ( 
             <div className="dropdown-content">
@@ -45,18 +46,12 @@ class ShowPageNavBar extends React.Component {
         <div className="nav-bar-show">
             <div className="nav-bar-left">
                 <h1 className="netflix-text netflix-text-navbar"> HeroFlix </h1>
-                <a href="https://github.com/divyams1"> {git} </a>
-                {/* <h2 className="nav-bar-item"> https://github.com/divyams1 </h2> */}
-                {/* <h2 className="nav-bar-item"> TV Shows </h2>
-                <h2 className="nav-bar-item"> New And Popular</h2>
-                <h2 className="nav-bar-item"> My List </h2> */}
+                <a  className="nav-bar-link" href="https://github.com/divyams1"> {git} </a>
+                <a  className="nav-bar-link"href="https://www.linkedin.com/in/divyam-satyarthi-b6628513b/"> {link} </a>
             </div>
             <div className="nav-bar-right">
-                <a href="https://www.linkedin.com/in/divyam-satyarthi-b6628513b/"> {link} </a>
-                {/* <h2 className="nav-bar-item"> https://www.linkedin.com/in/divyam-satyarthi-b6628513b/ </h2> */}
-                {/* <h2 className="nav-bar-item"> KIDS </h2>
-                <h2 className="nav-bar-item"> DVD </h2>
-                <h2 className="nav-bar-item">{gift}</h2> */}
+                {searchBar}
+                <h2 className="nav-bar-item">{search}</h2> 
                 <div className="dropdown-hover">
                     <h2 className="nav-bar-item last-item dropbtn"><img className="nav-bar-image" src="https://ih0.redbubble.net/image.618427277.3222/flat,1000x1000,075,f.u2.jpg" />{down}</h2>
                     {profiles_drop}
@@ -69,3 +64,5 @@ class ShowPageNavBar extends React.Component {
 }
 
 export default ShowPageNavBar;
+
+//   const gift = <FontAwesomeIcon icon={faGift} />

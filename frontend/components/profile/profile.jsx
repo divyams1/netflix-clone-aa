@@ -22,9 +22,10 @@ class Profile extends React.Component {
         return(
             <div className="profile-show ">
                 <div>
-                    < ShowPageNavBarContainer currentUser={this.props.currentUser} profiles={this.props.profiles} history={this.props.history} Logout={this.props.Logout} />
+                    < ShowPageNavBarContainer currentUser={this.props.currentUser} profiles={this.props.profiles} history={this.props.history} Logout={this.props.Logout} videos={this.props.videos} />
                      < MainVideoContainer />
-                     {genre_conts}
+                     {/* {genre_conts} */}
+                     <div></div>
                 </div>
                
             </div>

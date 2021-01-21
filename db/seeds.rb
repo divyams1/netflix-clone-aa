@@ -62,9 +62,9 @@ photo6 = open('https://netflix-ds-seeds.s3.amazonaws.com/theboys.jpg')
 video6.video.attach( io: vid6, filename: 'theboys.mp4')
 video6.photo.attach( io: photo6, filename: 'theboys.jpg')
 
-video7 = Video.create( title: "WandaVision", description: "Living idealized suburban lives, super-powered beings Wanda and Vision begin to suspect that everything is not as it seems", DateTime.new(1,1,1))
-vid7 = open('https://netflix-ds-seeds.s3.amazonaws.com/wanda.mp4')
-photo7 = open('https://netflix-ds-seeds.s3.amazonaws.com/wanda.jpg')
+# video7 = Video.create( title: "WandaVision", description: "Living idealized suburban lives, super-powered beings Wanda and Vision begin to suspect that everything is not as it seems", DateTime.new(1,1,1))
+# vid7 = open('https://netflix-ds-seeds.s3.amazonaws.com/wanda.mp4')
+# photo7 = open('https://netflix-ds-seeds.s3.amazonaws.com/wanda.jpg')
 
 # video7.video.attach(io: vid7, filename: 'wanda.mp4')
 # video7.photo.attach(io: photo7, filename: 'wanda.jpg')
@@ -124,3 +124,4 @@ GenresVideo.create( genre_id: 4, video_id: 7)
 
 
 
+  ``

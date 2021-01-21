@@ -31,7 +31,7 @@ class AddProfile extends React.Component {
     render() {
         return (
             <div className="add-profile-container">
-                <h1 className="netflix-text"> HeroFlix </h1>
+                <h1 className=" netflix-text profile-header-text"> HeroFlix </h1>
                 <div className="add-form-container">
                     <div>
                         <h1 className="Add-prof-text"> Add Profile </h1>

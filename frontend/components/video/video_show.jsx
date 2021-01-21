@@ -50,7 +50,7 @@ class VideoShow extends React.Component {
             <FontAwesomeIcon onClick={this.back} icon={faChevronLeft} className="backbutton" />
             <br className="height-div"></br>
             <h1> {videoTitle} </h1>
-            <p> {videoTitle} </p>
+            <p> {videoDescrpition} </p>
         </div>) : (<div></div>))
         
         const display = ( this.props.videos?   (

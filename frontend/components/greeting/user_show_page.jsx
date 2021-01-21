@@ -67,7 +67,7 @@ class UserShowPage extends React.Component {
            
         })
         const show_profiles = (  <div className="profiles-page">
-                <h1 className="netflix-text"> HeroFlix </h1>
+                <h1 className="netflix-text profile-header-text"> HeroFlix </h1>
                 <div className="profiles-header">
                     <h1 className="who-watch"> Who's watching? </h1>
                 </div>

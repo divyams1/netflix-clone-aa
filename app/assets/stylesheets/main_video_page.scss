@@ -67,8 +67,15 @@
   margin-right: 10px;
 }
 .search-bar {
-  border: 1px solid white; 
+  border: none; 
   color: white; 
   background-color: transparent;
-  height: 30px;
+  margin-left: 5px; 
+}
+
+.search-div-bar {
+  border: 1px solid white; 
+  display: flex; 
+  align-items: center;
+  height: 20px;
 }

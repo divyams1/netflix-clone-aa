@@ -8,6 +8,7 @@ class ShowPageNavBar extends React.Component {
         this.signOut = this.signOut.bind(this);
         this.profilePage = this.profilePage.bind(this);
         this.state = { search: false , titleSearch: false, currentSearch: '' }
+        this.toggleSearch = this.toggleSearch.bind(this);
     }
     signOut(e) {
         e.preventDefault();
@@ -19,12 +20,15 @@ class ShowPageNavBar extends React.Component {
         e.preventDefault();
         this.props.history.push('/')
     }
-
+    toggleSearch() {
+        this.setState({ search: true })
+    }
     render() {
         const git = <img className="link-icon github" alt="icon" src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" height={30} width={30}></img>;
          const link = <img  className="link-icon linked" alt="icon" src="https://pngmind.com/wp-content/uploads/2019/08/Linkedin-Logo-Png-Transparent-Background.png" width={30} height = {30} margin-top= {20} ></img>
-        const search = <FontAwesomeIcon icon={faSearch} size={'2x'} />
-        // const searchBar = <input className="search-bar" placeholder={`${search} Search Titles`} type="text"></input>
+        const search = <FontAwesomeIcon icon={faSearch} size={'1x'} onClick={this.toggleSearch} />
+        const searchBar = <div className="search-div-bar"> {search} <input onChange={this.props.updateSearch()} className="search-bar" placeholder={`Search Titles`}  type="text"></input> </div>
+        const searchShow = this.state.search? searchBar : search
         const down = <FontAwesomeIcon icon={faCaretDown} />
         const profiles_drop = Object.keys(this.props.profiles).length > 0 ? ( 
             <div className="dropdown-content">
@@ -50,8 +54,7 @@ class ShowPageNavBar extends React.Component {
                 <a  className="nav-bar-link"href="https://www.linkedin.com/in/divyam-satyarthi-b6628513b/"> {link} </a>
             </div>
             <div className="nav-bar-right">
-                {searchBar}
-                <h2 className="nav-bar-item">{search}</h2> 
+                <h2 className="nav-bar-item">{searchShow}</h2> 
                 <div className="dropdown-hover">
                     <h2 className="nav-bar-item last-item dropbtn"><img className="nav-bar-image" src="https://ih0.redbubble.net/image.618427277.3222/flat,1000x1000,075,f.u2.jpg" />{down}</h2>
                     {profiles_drop}

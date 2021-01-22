@@ -7,5 +7,8 @@ class Video < ApplicationRecord
 
     has_one_attached :video
     has_one_attached :photo
+
+    has_many :video_profiles
+    has_many :profiles, :through => :video_profiles
 end 
 

@@ -1,4 +1,4 @@
 class VideoProfile < ApplicationRecord
-    belongs_to :video 
-    belongs_to :course 
+    belongs_to :video, optional: true 
+    belongs_to :course, optional: true 
 end

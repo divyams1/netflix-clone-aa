@@ -10,6 +10,7 @@ class Profile extends React.Component {
         super(props)
         this.state = { search: false, currentSearch: ''} 
         this.updateSearch = this.updateSearch.bind(this);
+        this.searchOff = this.searchOff.bind(this);
     }
     componentDidMount() {
         this.props.fetchProfiles()
@@ -22,10 +23,14 @@ class Profile extends React.Component {
             if (this.state.currentSearch.length !== 0) {
                 this.setState( { 'search' : true })
             } 
-            if (this.state.currentSearch.length === 0) {
+            if (this.state.currentSearch.length === "") {
                 this.setState( {'search': false})
             }
         }
+    }
+
+    searchOff() {
+        this.setState( {'search': false, currentSearch: ''} )
     }
 
     render() {
@@ -34,12 +39,12 @@ class Profile extends React.Component {
             return <CarouselVideoContainer key={idx} genre={genre} />
         })) : <div></div> )
         const display = ( Object.values(this.props.profiles).length === 0 ? (<div> Hello </div>): (<div> Hello {this.props.profiles[this.props.match.params.profileId -1].name}</div>)) 
-        const renderVideo = this.state.search?   <SearchVideoContainer videos={this.props.videos} search={this.state.currentSearch} />: <h1> Not Search </h1>;
+        const renderVideo = this.state.search?   <SearchVideoContainer searchOff={this.searchOff} videos={this.props.videos} search={this.state.currentSearch} />: (<React.Fragment> <MainVideoContainer /> {genre_conts[0]} </React.Fragment>) ;
         return(
             <div className="profile-show ">
                 <div>
                     < ShowPageNavBarContainer currentUser={this.props.currentUser} profiles={this.props.profiles} history={this.props.history} Logout={this.props.Logout} videos={this.props.videos} updateSearch={this.updateSearch} />
-                     < MainVideoContainer />
+                     {/* < MainVideoContainer /> */}
                      {/* {genre_conts} */}
                      {/* <SearchVideoContainer /> */}
                      {renderVideo}

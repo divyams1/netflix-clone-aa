@@ -75,9 +75,11 @@ class SessionForm extends React.Component {
                 <div className="signup-page">
                     <div className="signup-header">
                         <div>
+                            <Link to="/">
                             <h1 className="loginNetflix"> HeroFlix </h1>
+                            </Link>
                         </div>
-                        <Link className="login-text-link" to='/login'> <h2>Sign In</h2></Link>
+                        <Link className="login-text-link" to='/login'> <h2 className="sign-up-link">Sign In</h2></Link>
                     </div>
                 <div className="signup-form-container">
                 <form className="signup-form">

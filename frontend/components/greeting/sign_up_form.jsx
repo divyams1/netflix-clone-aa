@@ -23,7 +23,10 @@ class SignUpForm extends React.Component {
     render() {
         return(
             <form className="email-submit-form">
-                <input className="email-text-box" type="text" placeholder="Email address" value={this.state.email}  onChange={this.handleInput('email')} ></input><button className="email-submit-but" onClick={this.goToSignUp}> GET STARTED</button>
+                <div className="text-box-div">
+                    <input className="email-text-box" type="text" placeholder="Email address" value={this.state.email}  onChange={this.handleInput('email')} ></input>
+                </div>
+                <button className="email-submit-but" onClick={this.goToSignUp}> GET STARTED</button>
             </form>
         )
     }

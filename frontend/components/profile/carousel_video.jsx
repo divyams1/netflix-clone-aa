@@ -25,7 +25,7 @@ class CarouselVideo extends React.Component {
             </div>
             </div>): <div></div>)
         return(
-            <div>
+            <div className="carousel-whole-parent">
                 {display}
             </div>
            

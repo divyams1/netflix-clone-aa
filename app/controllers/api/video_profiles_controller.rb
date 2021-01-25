@@ -1,7 +1,8 @@
 class Api::VideoProfilesController < ApplicationController 
     def create 
+       
         video_profile = VideoProfile.create(video_profile_params)
-
+        
         if video_profile.save 
             render json: video_profile 
         else  

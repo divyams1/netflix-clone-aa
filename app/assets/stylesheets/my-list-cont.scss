@@ -1,5 +1,7 @@
 .my-list-cont {
-    background: #141414;
+    // background: #141414;
+    font-family: 'Bebas Neue', cursive;
+    background: black;
     color: #fff;
     height: 100%;
     width: 100%;
@@ -13,4 +15,9 @@
 .my-list-shows {
     margin-top: 10%;
     margin-left: 2%;
+}
+
+.my-list-cont-shows {
+    display: flex; 
+    flex-wrap: wrap;
 }

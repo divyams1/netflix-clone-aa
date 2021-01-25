@@ -1,6 +1,6 @@
 .email-text-box {
-    width:64%;
-    height: 50px;
+    width:100%;
+    height: 83%;
 }
 
 .email-submit-but {
@@ -8,8 +8,16 @@
     background-color: red;
     color: white;
     font-size: 25px;
+    height: 9%;
 }
 
 .email-submit-form {
     display: flex;
+    height: 25%;
+}
+
+.text-box-div {
+    width: 50%;
+    margin-left: 10%;
+ 
 }

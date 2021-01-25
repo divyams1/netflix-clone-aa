@@ -6,18 +6,24 @@ import { faPlayCircle, faPlusCircle, faChevronDown  } from '@fortawesome/free-so
 class SmallVideo extends React.Component {
     constructor(props) {
         super(props)
-        this.state = { hovered: false}
+        this.state = { hovered: false, profileId: this.props.match.params.profileId, videoId:  this.props.video.id }
         this.playClick = this.playClick.bind(this);
+        this.addMyList = this.addMyList.bind(this);
     }
 
     playClick() {
-        
         this.props.history.push(`/videos/${this.props.video.id}`)
+    }
+
+    addMyList() {
+        const profileId = (this.state.profileId);
+        const videoId = (this.state.videoId); 
+        const videoProfile = {video_id: videoId, profile_id: profileId}  
         
+        this.props.createVideoProfile(videoProfile);
     }
     render() {
 
-        
         const video = this.state.hovered? (   <video onMouseLeave={ ()=> this.setState({ hovered: false }) } onMouseEnter={ () => this.setState({hovered:true}) } className="big-video-image" autoPlay muted  >
                             <source src={this.props.video.videoUrl} type="video/mp4" />
                         </video>): (  <video onMouseLeave={ ()=> this.setState({ hovered: false }) } onMouseEnter={ () => this.setState({hovered:true}) } className="big-video-image" ended="true" muted  >
@@ -33,7 +39,7 @@ class SmallVideo extends React.Component {
                         <div className="button-list">
                         <div className="left-buttons">
                             <button onClick={this.playClick} className="video-button" > {play}  </button>
-                            <button className="video-button play-video-button"> {plus} </button>
+                            <button className="video-button play-video-button" onClick={this.addMyList}> {plus} </button>
                         </div>
                         <div className="right-buttons">
                             <button className="video-button"> {down} </button>

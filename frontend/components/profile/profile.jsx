@@ -20,7 +20,7 @@ class Profile extends React.Component {
     updateSearch() {
         return e => {
             this.setState( { 'currentSearch' : e.currentTarget.value })
-            if (this.state.currentSearch.length !== 0) {
+            if (this.state.currentSearch !== "") {
                 this.setState( { 'search' : true })
             } 
             if (this.state.currentSearch.length === "") {
@@ -43,7 +43,7 @@ class Profile extends React.Component {
         return(
             <div className="profile-show ">
                 <div>
-                    < ShowPageNavBarContainer currentUser={this.props.currentUser} profiles={this.props.profiles} history={this.props.history} Logout={this.props.Logout} videos={this.props.videos} updateSearch={this.updateSearch} />
+                    < ShowPageNavBarContainer profileId={this.props.match.params.profileId} currentUser={this.props.currentUser} profiles={this.props.profiles} history={this.props.history} Logout={this.props.Logout} videos={this.props.videos} updateSearch={this.updateSearch} />
                      {/* < MainVideoContainer /> */}
                      {/* {genre_conts} */}
                      {/* <SearchVideoContainer /> */}
@@ -62,5 +62,3 @@ export default Profile;
 
 
 
-//  {<Slider movies={this.props.entities.movies} />}
-//   {/* <CarouselVideoContainer genre={Object.values(this.props.genres)[0]} />

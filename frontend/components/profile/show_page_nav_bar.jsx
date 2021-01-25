@@ -9,6 +9,7 @@ class ShowPageNavBar extends React.Component {
         this.profilePage = this.profilePage.bind(this);
         this.state = { search: false , titleSearch: false, currentSearch: '' }
         this.toggleSearch = this.toggleSearch.bind(this);
+        this.myList = this.myList.bind(this);
     }
     signOut(e) {
         e.preventDefault();
@@ -22,6 +23,11 @@ class ShowPageNavBar extends React.Component {
     }
     toggleSearch() {
         this.setState({ search: true })
+    }
+    myList(e) {
+        e.preventDefault();
+        const profileId = this.props.match.params.profileId; 
+        this.props.history.push(`/profiles/${profileId}/myList`)
     }
     render() {
         const git = <img className="link-icon github" alt="icon" src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" height={30} width={30}></img>;
@@ -46,12 +52,19 @@ class ShowPageNavBar extends React.Component {
                  <button onClick={this.signOut} className="account-button"> Sign Out of HeroFlix </button>
             </div>
         ) : ( <div></div>);
+        const myListDiv = (   <Link className="my-list-link" to={`/profiles/${this.props.profileId}/myList`}>
+                    <p> My List </p>
+                </Link>)
+        
         return(
         <div className="nav-bar-show">
             <div className="nav-bar-left">
+                <Link to={`/profiles/${this.props.profileId}`}>
                 <h1 className="netflix-text netflix-text-navbar"> HeroFlix </h1>
+                </Link>
                 <a  className="nav-bar-link" href="https://github.com/divyams1"> {git} </a>
                 <a  className="nav-bar-link"href="https://www.linkedin.com/in/divyam-satyarthi-b6628513b/"> {link} </a>
+                {myListDiv}
             </div>
             <div className="nav-bar-right">
                 <h2 className="nav-bar-item">{searchShow}</h2> 

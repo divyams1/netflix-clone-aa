@@ -7,7 +7,8 @@ import {withRouter} from 'react-router-dom';
 const mSTP = (state, ownProps) => {
     return {
         currentUser: state.entities.users[state.session.id],
-        profiles: state.entities.profiles
+        profiles: state.entities.profiles,
+        profileId: ownProps.match.params.profileId
     }
 }
 

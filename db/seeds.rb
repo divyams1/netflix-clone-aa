@@ -15,36 +15,36 @@ Genre.destroy_all
 video1 = Video.create(title: "Guardians of the Galaxy",  description:
   " A group of intergalactic criminals must pull together to stop a fanatical warrior with plans to purge the universe. After stealing a mysterious orb in the far reaches of outer space, Peter Quill from Earth is now the main target of a manhunt led by the villain known as Ronan the Accuser.", time: DateTime.new(5,2,5))
 vid1 = open('https://netflix-ds-seeds.s3.amazonaws.com/gotg.mp4')
-photo1 = open('https://netflix-ds-seeds.s3.amazonaws.com/gotg.jpg')
+photo1 = open('https://netflix-ds-seeds.s3.amazonaws.com/gotg2.jpg')
 
 video1.video.attach(io: vid1, filename: 'gotg.mp4')
-video1.photo.attach(io: photo1, filename: 'gotg.jpg')
+video1.photo.attach(io: photo1, filename: 'gotg2.jpg')
 
 
 video2 = Video.create(title: "Daredevil", description: "Blinded in a childhood accident, attorney-at-law Matt Murdock protects Hell’s Kitchen as the masked vigilante, Daredevil." , time: DateTime.new(5,2,5) )
 vid2 = open('https://netflix-ds-seeds.s3.amazonaws.com/daredevil.mp4')
-photo2 = open('https://netflix-ds-seeds.s3.amazonaws.com/daredevil.jpg')
+photo2 = open('https://netflix-ds-seeds.s3.amazonaws.com/daredevil2.jpg')
 
 video2.video.attach( io: vid2, filename: 'daredevil.mp4')
-video2.photo.attach( io: photo2, filename: 'daredevil.jpg')
+video2.photo.attach( io: photo2, filename: 'daredevil2.jpg')
 
 
 video3 = Video.create(title: "Avatar the Last Airbender" , description: "In a war-torn world of elemental magic, a young boy reawakens to undertake a dangerous mystic quest to fulfill his destiny as the Avatar, and bring peace to the world.", time: DateTime.new(6,2,5) )
 vid3 = open('https://netflix-ds-seeds.s3.amazonaws.com/avatar.mp4')
-photo3 = open('https://netflix-ds-seeds.s3.amazonaws.com/avatar.jpg')
+photo3 = open('https://netflix-ds-seeds.s3.amazonaws.com/avatar3.jpg')
 
 video3.video.attach( io: vid3, filename: 'avatar.mp4')
-video3.photo.attach( io: photo3, filename: 'avatar.jpg')
+video3.photo.attach( io: photo3, filename: 'avatar3.jpg')
 
 
 video4 = Video.create(title: "Arrow", description: "After a violent shipwreck, billionaire playboy Oliver Queen (Stephen Amell) was missing and presumed dead for five years before being discovered alive on a remote island in the North China Sea. He returned home to Star City, bent on righting the wrongs done by his family and fighting injustice.",
 time: DateTime.new(5,2,3) )
 vid4 = open('https://netflix-ds-seeds.s3.amazonaws.com/arrow.mp4')
-photo4 = open('https://netflix-ds-seeds.s3.amazonaws.com/arrow.png')
+photo4 = open('https://netflix-ds-seeds.s3.amazonaws.com/arrow3.png')
 
 
 video4.video.attach( io: vid4, filename: 'arrow.mp4')
-video4.photo.attach( io: photo4, filename: 'arrow.png')
+video4.photo.attach( io: photo4, filename: 'arrow3.png')
 
 video5 = Video.create(title: "The Flash" , description: "At 11, Barry Allen's life changed completely when his mother died in a freak accident and his innocent father was convicted of her murder. Orphaned Barry later becomes Detective Joe West. Now a crime-scene investigator, his dedication to learn the truth about his mother's death drives him to
 follow up on every new scientific advancement and urban legend.", time: DateTime.new(3,1,2) )
@@ -62,26 +62,26 @@ photo6 = open('https://netflix-ds-seeds.s3.amazonaws.com/theboys.jpg')
 video6.video.attach( io: vid6, filename: 'theboys.mp4')
 video6.photo.attach( io: photo6, filename: 'theboys.jpg')
 
-# video7 = Video.create( title: "WandaVision", description: "Living idealized suburban lives, super-powered beings Wanda and Vision begin to suspect that everything is not as it seems", DateTime.new(1,1,1))
-# vid7 = open('https://netflix-ds-seeds.s3.amazonaws.com/wanda.mp4')
-# photo7 = open('https://netflix-ds-seeds.s3.amazonaws.com/wanda.jpg')
+video7 = Video.create( title: "WandaVision", description: "Living idealized suburban lives, super-powered beings Wanda and Vision begin to suspect that everything is not as it seems", DateTime.new(1,1,1))
+vid7 = open('https://netflix-ds-seeds.s3.amazonaws.com/wanda.mp4')
+photo7 = open('https://netflix-ds-seeds.s3.amazonaws.com/wanda.jpg')
 
-# video7.video.attach(io: vid7, filename: 'wanda.mp4')
-# video7.photo.attach(io: photo7, filename: 'wanda.jpg')
+video7.video.attach(io: vid7, filename: 'wanda.mp4')
+video7.photo.attach(io: photo7, filename: 'wanda.jpg')
 
-# video8 = Video.create( title: 'The Batman', "The Batman is an upcoming American superhero film based on the DC Comics character of the same name.", DateTime.new(2020,1,2,3,4))
-# vid8 = open('https://netflix-ds-seeds.s3.amazonaws.com/batman.mp4')
-# photo8 = open('https://netflix-ds-seeds.s3.amazonaws.com/batman.jpg')
+video8 = Video.create( title: 'The Batman', "The Batman is an upcoming American superhero film based on the DC Comics character of the same name.", DateTime.new(2020,1,2,3,4))
+vid8 = open('https://netflix-ds-seeds.s3.amazonaws.com/batman.mp4')
+photo8 = open('https://netflix-ds-seeds.s3.amazonaws.com/batman6.jpg')
 
-# video8.video.attach(io: vid8, 'batman.mp4')
-# video8.photo.attach(io: photo8, 'batman.jpg')
+video8.video.attach(io: vid8, 'batman.mp4')
+video8.photo.attach(io: photo8, 'batman6.jpg')
 
-# video9 = Video.create( title: 'Loki', description: "Loki is an upcoming American television series created by Michael Waldron for the streaming service Disney+, based on the Marvel Comics character of the same name.", time: DateTime.new(2020,2,3,4,5))
-# vid9 = open('https://netflix-ds-seeds.s3.amazonaws.com/loki.mp4')
-# photo9 = open('https://netflix-ds-seeds.s3.amazonaws.com/loki.png')
+video9 = Video.create( title: 'Loki', description: "Loki is an upcoming American television series created by Michael Waldron for the streaming service Disney+, based on the Marvel Comics character of the same name.", time: DateTime.new(2020,2,3,4,5))
+vid9 = open('https://netflix-ds-seeds.s3.amazonaws.com/loki.mp4')
+photo9 = open('https://netflix-ds-seeds.s3.amazonaws.com/loki.png')
 
-# video9.photo.attach(io: vid9, 'loki.mp4')
-# video9.video.attach(io: photo9, 'loki.png')
+video9.photo.attach(io: vid9, 'loki.mp4')
+video9.video.attach(io: photo9, 'loki.png')
 
 
 #Genre Seed Data 

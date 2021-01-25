@@ -16,6 +16,12 @@ class Api::VideoProfilesController < ApplicationController
         render json: video_profiles 
     end 
 
+    def destroy 
+        video_profile = VideoProfile.find(params[:id])
+        video_profile.destroy
+
+    end 
+
     private 
     def video_profile_params 
         params.require(:video_profile).permit(:video_id, :profile_id)

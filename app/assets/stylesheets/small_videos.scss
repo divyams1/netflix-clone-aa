@@ -13,9 +13,9 @@
     
 }
 .video-image {
-    // object-fit: contain;
+    object-fit: fill;
     // // margin: 10px;
-    // border-radius: 10px;
+    border-radius: 5px;
     // flex: 0 0 19.7%;
     // margin: 0 2px;
     transition: transform 300ms ease 100ms;
@@ -79,19 +79,28 @@
 
 
 .video-button {
-    border-radius: 100px;
-    height: 30px;
-    width: 30px;
-    margin-top: 15px;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 10px;
+    // border-radius: 100px;
+    // height: 30px;
+    // width: 30px;
+    // margin-top: 15px;
+    // margin-left: 5px;
+    // margin-right: 5px;
+    // margin-bottom: 10px;
+    background-color: 	rgb(48,48,48);
+    border: 0;
+    color: white;
+    margin-left: 3%;
+    margin-right: 3%;
+    height: 60%;
+    width: 30%;
 }
 
 .button-list {
     background-color: 	rgb(48,48,48);
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 30px;
 }
 .carousel-row {
     display: flex;

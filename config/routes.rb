@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :profiles, only: [:create, :index, :show]
     resources :videos, only: [:show, :index]
     resources :genres, only: [:show, :index]
-    resources :video_profiles, only: [:show, :create, :index]
+    resources :video_profiles, only: [:show, :create, :index, :destroy]
   end 
   
 end

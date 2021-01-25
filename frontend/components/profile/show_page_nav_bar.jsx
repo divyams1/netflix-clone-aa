@@ -33,7 +33,7 @@ class ShowPageNavBar extends React.Component {
         const git = <img className="link-icon github" alt="icon" src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" height={30} width={30}></img>;
          const link = <img  className="link-icon linked" alt="icon" src="https://pngmind.com/wp-content/uploads/2019/08/Linkedin-Logo-Png-Transparent-Background.png" width={30} height = {30} margin-top= {20} ></img>
         const search = <FontAwesomeIcon icon={faSearch} size={'1x'} onClick={this.toggleSearch} />
-        const searchBar = <div className="search-div-bar"> {search} <input onChange={this.props.updateSearch()} className="search-bar" placeholder={`Search Titles`}  type="text"></input> </div>
+        const searchBar = <div className="search-div-bar"> {search} <input onChange={this.props.updateSearch()} className="search-bar"  placeholder={`Search Titles`}  type="text"></input> </div>
         const searchShow = this.state.search? searchBar : search
         const down = <FontAwesomeIcon icon={faCaretDown} />
         const profiles_drop = Object.keys(this.props.profiles).length > 0 ? ( 

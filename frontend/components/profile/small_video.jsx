@@ -36,7 +36,6 @@ class SmallVideo extends React.Component {
                    <img className="video-image" src={this.props.video.photoUrl} />
                     <div className="video-cont" key={this.props.video.videoUrl}>
                         {video}
-                        <div className="button-cont">
                             <div className="button-list">
                             <div className="left-buttons">
                                 <button onClick={this.playClick} className="video-button" > {play}  </button>
@@ -45,10 +44,6 @@ class SmallVideo extends React.Component {
                             <div className="right-buttons">
                                 <button className="video-button play-video-button" onClick={this.addMyList}> {plus} </button>
                             </div>
-                            <div>
-                                <p> {this.props.video.title} </p>
-                            </div>
-                        </div>
                     </div>
             </div>
         </div>)

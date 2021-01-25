@@ -19,13 +19,9 @@ class Profile extends React.Component {
     }
     updateSearch() {
         return e => {
-            this.setState( { 'currentSearch' : e.currentTarget.value })
-            if (this.state.currentSearch !== "") {
-                this.setState( { 'search' : true })
-            } 
-            if (this.state.currentSearch.length === "") {
-                this.setState( {'search': false})
-            }
+            
+            this.setState( { 'currentSearch' : e.currentTarget.value, search: true })
+          
         }
     }
 

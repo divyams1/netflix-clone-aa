@@ -10,7 +10,7 @@ require 'open-uri'
 
 Video.destroy_all 
 Genre.destroy_all
-GenresVideo.destroy_all
+GenresVideo.delete_all
 
 
 video1 = Video.create(title: "Guardians of the Galaxy",  description:

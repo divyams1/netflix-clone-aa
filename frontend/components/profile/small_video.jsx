@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlayCircle, faPlusCircle, faChevronDown  } from '@fortawesome/free-solid-svg-icons';
+import { faPlayCircle, faPlusCircle, faChevronDown, faCheck  } from '@fortawesome/free-solid-svg-icons';
 
 
 class SmallVideo extends React.Component {
@@ -23,7 +23,7 @@ class SmallVideo extends React.Component {
         this.props.createVideoProfile(videoProfile);
     }
     render() {
-
+        
         const video = this.state.hovered? (   <video onMouseLeave={ ()=> this.setState({ hovered: false }) } onMouseEnter={ () => this.setState({hovered:true}) } className="big-video-image" autoPlay muted  >
                             <source src={this.props.video.videoUrl} type="video/mp4" />
                         </video>): (  <video onMouseLeave={ ()=> this.setState({ hovered: false }) } onMouseEnter={ () => this.setState({hovered:true}) } className="big-video-image" autoPlay muted  >
@@ -32,6 +32,7 @@ class SmallVideo extends React.Component {
         const play = <FontAwesomeIcon icon={faPlayCircle} size={'2x'} />
         const plus = <FontAwesomeIcon icon={faPlusCircle} size={'2x'} />
         const down = <FontAwesomeIcon icon={faChevronDown} />
+        const check = <FontAwesomeIcon icon={faCheck} size={'2x'} />
         const box = ( 
         <div className="big-box">
             <img className="video-image" src={this.props.video.photoUrl} />
@@ -43,11 +44,15 @@ class SmallVideo extends React.Component {
                                  <button onClick={this.playClick} className="video-button" > {play}  </button>  
                            </div>
                            <div className="right-buttons">
+                               <div className="my-list-hover"> 
+                                    <p> Add To My List </p>
+                                </div>
                                 <button className="video-button play-video-button" onClick={this.addMyList}> {plus} </button>
+                                
                            </div>
                        </div>
                        <div className="title-container">
-                           <p> {this.props.video.genres.map( genre => { return genre.name }).join(' ')} </p>
+                           <p className="genres-text"> {this.props.video.genres.map( genre => { return genre.name }).join(' • ')} </p>
                        </div>
                     </div>   
             </div>  

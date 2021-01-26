@@ -134,10 +134,7 @@
     margin-top: 2%;
 }
 
-.right-buttons {
-    margin-left: 5%;
-    margin-top: 2%;
-}
+
 
 .dropdown-text-title {
     margin: 0;
@@ -151,4 +148,36 @@
 .title-container {
     margin: 0;
     text-align: center;
+}
+
+.genres-text {
+    font-size: x-small;
+}
+
+.my-list-hover {
+    
+    position: absolute;
+    visibility: hidden;
+    color: black; 
+    background-color: white;
+    z-index:10;
+    width: 80px;
+    text-align: center;
+    font-size: xx-small;
+    height: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.right-buttons:hover .my-list-hover {
+    visibility: visible;
+    bottom: 30px;
+    
+}
+
+.right-buttons {
+    margin-left: 5%;
+    margin-top: 2%;
+    position: relative;
+    transition: transform 300ms ease 100ms;
 }

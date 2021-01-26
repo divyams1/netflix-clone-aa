@@ -63,14 +63,14 @@ photo6 = open('https://netflix-ds-seeds.s3.amazonaws.com/theboys.jpg')
 video6.video.attach( io: vid6, filename: 'theboys.mp4')
 video6.photo.attach( io: photo6, filename: 'theboys.jpg')
 
-video7 = Video.create( title: "WandaVision", description: "Living idealized suburban lives, super-powered beings Wanda and Vision begin to suspect that everything is not as it seems", DateTime.new(1,1,1))
+video7 = Video.create( title: "WandaVision", description: "Living idealized suburban lives, super-powered beings Wanda and Vision begin to suspect that everything is not as it seems",time: DateTime.new(1,1,1))
 vid7 = open('https://netflix-ds-seeds.s3.amazonaws.com/wanda.mp4')
 photo7 = open('https://netflix-ds-seeds.s3.amazonaws.com/wanda.jpg')
 
 video7.video.attach(io: vid7, filename: 'wanda.mp4')
 video7.photo.attach(io: photo7, filename: 'wanda.jpg')
 
-video8 = Video.create( title: 'The Batman', "The Batman is an upcoming American superhero film based on the DC Comics character of the same name.", DateTime.new(2020,1,2,3,4))
+video8 = Video.create( title: 'The Batman', "The Batman is an upcoming American superhero film based on the DC Comics character of the same name.",time: DateTime.new(2020,1,2,3,4))
 vid8 = open('https://netflix-ds-seeds.s3.amazonaws.com/batman.mp4')
 photo8 = open('https://netflix-ds-seeds.s3.amazonaws.com/batman6.jpg')
 

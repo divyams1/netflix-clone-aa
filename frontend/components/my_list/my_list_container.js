@@ -20,7 +20,8 @@ const mDTP = dispatch => {
         fetchVideoProfiles: () => dispatch(fetchVideoProfiles()),
         fetchProfiles: () => dispatch(fetchProfiles()),
         fetchGenres: () => dispatch(fetchGenres()),
-        Logout: () => dispatch(Logout())
+        Logout: () => dispatch(Logout()),
+        fetchProfile: id => dispatch(fetchProfile(id))
     }
 }
 

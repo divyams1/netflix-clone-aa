@@ -30,17 +30,13 @@ class myList extends React.Component {
 
     render() { 
         const videos = this.state[0].videos;
-        const profiles = this.state[1].videoProfiles;
         const profileId = this.props.match.params.profileId; 
+        const profiles = this.state[2].profiles;
+        
+        const profile = Object.values(profiles).filter( profile => { return profile.id === parseInt(profileId) })
         let containers = <div></div>
-        debugger 
-        if (videos.length > 0 && profiles.length > 0) {
-            let profileVideos = profiles.filter( profile => profile.profile_id === parseInt(profileId) ); 
-            let videoIds = profileVideos.map( profile => {return profile.video_id} )
-            let videosToRender = videoIds.map( id => {
-               return videos.find( video => { return video.id === id })
-            })
-            containers = videosToRender.map( (video, idx)  => {
+        if (profile.length > 0)  {
+            containers = profile[0].videos.map( (video, idx)  => {
                 return <SmallVideoContainer video={video} key={idx} />
             })
         }

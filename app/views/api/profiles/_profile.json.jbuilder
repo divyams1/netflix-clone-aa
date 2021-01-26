@@ -1,1 +1,1 @@
-json.extract! profile, :name
+json.extract! profile, :id, :name, :videos

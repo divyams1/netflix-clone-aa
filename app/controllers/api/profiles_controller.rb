@@ -11,13 +11,13 @@ class Api::ProfilesController < ApplicationController
     end 
 
     def index 
-        profile = Profile.all.includes(:user)
-        render json: profile
+        @profiles = Profile.all.includes(:user)
+        render :index
     end 
 
     def show 
-        profile = Profile.find(params[:id])
-        render json: profile
+        @profile = Profile.find(params[:id])
+        render :show 
     end 
 
     private

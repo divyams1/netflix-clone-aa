@@ -25,7 +25,7 @@
     max-height: 220px;
     min-height: 220px;
     height: 100%;
-    
+
     // object-fit: cover;
     
 }
@@ -34,17 +34,20 @@
     display: none;
     height: 100%;
     width: 100%;
-
+    min-height: 200px;
     margin: 0;
     padding: 0;
 }
-// .big-box:hover .big-box {
-//     transform: translateX(-20%);
-// }
+.big-box:hover .big-box {
+    transform: translateX(-20%);
+}
 
-
+.big-video-image {
+    display: none;
+}
 .video-cont {
     display: none;
+    min-height: 200px;
 }
 
 .big-box:hover {
@@ -63,13 +66,19 @@
     display: absolute;
     display: flex;
     flex-direction: column;
-    border-radius: 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    min-height: 170px;
+    
 }
 
 .big-box:hover .big-video-image {
     display: block;
     display: absolute;
     z-index: 1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 80%;
 }
 
 
@@ -81,28 +90,27 @@
 
 
 .video-button {
-    // border-radius: 100px;
-    // height: 30px;
-    // width: 30px;
-    // margin-top: 15px;
-    // margin-left: 5px;
-    // margin-right: 5px;
-    // margin-bottom: 10px;
     background-color: 	rgb(48,48,48);
     border: 0;
     color: white;
     margin-left: 3%;
     margin-right: 3%;
-    height: 60%;
+    height: 50%;
     width: 30%;
 }
 
 .button-list {
     background-color: 	rgb(48,48,48);
+    height: 20%;
+    min-height: 80px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.buttons-top-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 30px;
 }
 .carousel-row {
     display: flex;
@@ -113,11 +121,34 @@
 .carousel-whole {
     margin-top: 3%;
     background-color: black;
-    // width: 100%;
-    margin-left: 3%;
+    margin-left: 4%;
 }
 
 .carousel-whole-parent {
     background: black;
    
+}
+
+.left-buttons {
+    margin-right: 60%;
+    margin-top: 2%;
+}
+
+.right-buttons {
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.dropdown-text-title {
+    margin: 0;
+}
+
+.buttons-container-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-container {
+    margin: 0;
+    text-align: center;
 }

@@ -26,28 +26,33 @@ class SmallVideo extends React.Component {
 
         const video = this.state.hovered? (   <video onMouseLeave={ ()=> this.setState({ hovered: false }) } onMouseEnter={ () => this.setState({hovered:true}) } className="big-video-image" autoPlay muted  >
                             <source src={this.props.video.videoUrl} type="video/mp4" />
-                        </video>): (  <video onMouseLeave={ ()=> this.setState({ hovered: false }) } onMouseEnter={ () => this.setState({hovered:true}) } className="big-video-image" ended="true" muted  >
+                        </video>): (  <video onMouseLeave={ ()=> this.setState({ hovered: false }) } onMouseEnter={ () => this.setState({hovered:true}) } className="big-video-image" autoPlay muted  >
                             <source src={this.props.video.videoUrl} type="video/mp4" />
                         </video>)
-        const play = <FontAwesomeIcon icon={faPlayCircle} />
-        const plus = <FontAwesomeIcon icon={faPlusCircle} />
+        const play = <FontAwesomeIcon icon={faPlayCircle} size={'2x'} />
+        const plus = <FontAwesomeIcon icon={faPlusCircle} size={'2x'} />
         const down = <FontAwesomeIcon icon={faChevronDown} />
-        const box = ( <div className="big-box">
-                   <img className="video-image" src={this.props.video.photoUrl} />
-                    <div className="video-cont" key={this.props.video.videoUrl}>
-                        {video}
-                            <div className="button-list">
+        const box = ( 
+        <div className="big-box">
+            <img className="video-image" src={this.props.video.photoUrl} />
+            <div className="video-cont" key={this.props.video.videoUrl}>
+                {video}
+                    <div className="button-list">
+                       <div className="buttons-container-top">
                             <div className="left-buttons">
-                                <button onClick={this.playClick} className="video-button" > {play}  </button>
-                                
-                            </div>
-                            <div className="right-buttons">
+                                 <button onClick={this.playClick} className="video-button" > {play}  </button>  
+                           </div>
+                           <div className="right-buttons">
                                 <button className="video-button play-video-button" onClick={this.addMyList}> {plus} </button>
-                            </div>
-                    </div>
-            </div>
+                           </div>
+                       </div>
+                       <div className="title-container">
+                           <p> {this.props.video.genres.map( genre => { return genre.name }).join(' ')} </p>
+                       </div>
+                    </div>   
+            </div>  
         </div>)
-     
+       
         
         return (
             <React.Fragment>
@@ -59,3 +64,12 @@ class SmallVideo extends React.Component {
 
 export default SmallVideo;
 
+//  <div className="buttons-top-box" />
+//                             <div className="left-buttons">
+//                                 <button onClick={this.playClick} className="video-button" > {play}  </button>  
+//                             </div>
+//                             <div className="right-buttons">
+//                                 <button className="video-button play-video-button" onClick={this.addMyList}> {plus} </button>
+//                             </div>
+                        
+//                         <p className="dropdown-text-title"> {this.props.video.title} </p>

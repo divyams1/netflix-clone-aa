@@ -22,7 +22,7 @@ class MainVideo extends React.Component {
         const info = <FontAwesomeIcon icon={faInfoCircle} />
         const display = (Object.values(this.props.videos).length > 1 ? (   
                 <div className="myVideo">
-                    <video className="myVideo" autoPlay muted >
+                    <video className="myVideo" autoPlay muted loop >
                         <source src={Object.values(this.props.videos)[0].videoUrl} type="video/mp4"  />
                     </video>
                     <div className="content">

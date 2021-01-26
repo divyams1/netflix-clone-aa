@@ -1,1 +1,1 @@
-json.extract! @genre, :name, :video_ids
+json.extract! @genre, :name, :video_ids, :videos

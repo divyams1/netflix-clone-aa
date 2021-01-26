@@ -70,7 +70,7 @@ photo7 = open('https://netflix-ds-seeds.s3.amazonaws.com/wanda.jpg')
 video7.video.attach(io: vid7, filename: 'wanda.mp4')
 video7.photo.attach(io: photo7, filename: 'wanda.jpg')
 
-video8 = Video.create( title: 'The Batman', "The Batman is an upcoming American superhero film based on the DC Comics character of the same name.",time: DateTime.new(2020,1,2,3,4))
+video8 = Video.create( title: 'The Batman', description: "The Batman is an upcoming American superhero film based on the DC Comics character of the same name.",time: DateTime.new(2020,1,2,3,4))
 vid8 = open('https://netflix-ds-seeds.s3.amazonaws.com/batman.mp4')
 photo8 = open('https://netflix-ds-seeds.s3.amazonaws.com/batman6.jpg')
 

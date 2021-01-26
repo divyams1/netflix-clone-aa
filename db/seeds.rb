@@ -10,6 +10,7 @@ require 'open-uri'
 
 Video.destroy_all 
 Genre.destroy_all
+GenreVideo.destroy_all
 
 
 video1 = Video.create(title: "Guardians of the Galaxy",  description:
@@ -86,42 +87,59 @@ video9.video.attach(io: photo9, 'loki.png')
 
 #Genre Seed Data 
 
-Genre.create(name: "Trending" )
-Genre.create(name: "Popular" )
-Genre.create(name: "Action")
-Genre.create(name: "Thriller")
+genre1 = Genre.create(name: "Trending" )
+genre2 = Genre.create(name: "Popular" )
+genre3 = Genre.create(name: "Action")
+genre4 = Genre.create(name: "Thriller")
+
+genre_id_1 = genre1.id 
+genre_id_2 = genre2.id 
+genre_id_3 = genre3.id 
+genre_id_4 = genre4.id 
+
+
+video_id_1 = video1.id
+video_id_2 = video2.id
+video_id_3 = video3.id
+video_id_4 = video4.id
+video_id_5 = video5.id
+video_id_6 = video6.id
+video_id_7 = video7.id
+video_id_8 = video8.id
+video_id_9 = video9.id
 
 #Genre Video Seed Data 
-GenresVideo.create( genre_id: 5, video_id: 1)
-GenresVideo.create( genre_id: 5, video_id: 2)
-GenresVideo.create( genre_id: 5, video_id: 3)
-GenresVideo.create( genre_id: 5, video_id: 4)
-GenresVideo.create( genre_id: 5, video_id: 5)
-GenresVideo.create( genre_id: 5, video_id: 6)
-GenresVideo.create( genre_id: 5, video_id: 7)
-GenresVideo.create( genre_id: 2, video_id: 1)
-GenresVideo.create( genre_id: 2, video_id: 2)
-GenresVideo.create( genre_id: 2, video_id: 3)
-GenresVideo.create( genre_id: 2, video_id: 4)
-GenresVideo.create( genre_id: 2, video_id: 5)
-GenresVideo.create( genre_id: 2, video_id: 6)
-GenresVideo.create( genre_id: 2, video_id: 7)
-GenresVideo.create( genre_id: 3, video_id: 1)
-GenresVideo.create( genre_id: 3, video_id: 2)
-GenresVideo.create( genre_id: 3, video_id: 3)
-GenresVideo.create( genre_id: 3, video_id: 4)
-GenresVideo.create( genre_id: 3, video_id: 5)
-GenresVideo.create( genre_id: 3, video_id: 6)
-GenresVideo.create( genre_id: 3, video_id: 7)
-GenresVideo.create( genre_id: 4, video_id: 1)
-GenresVideo.create( genre_id: 4, video_id: 2)
-GenresVideo.create( genre_id: 4, video_id: 3)
-GenresVideo.create( genre_id: 4, video_id: 4)
-GenresVideo.create( genre_id: 4, video_id: 5)
-GenresVideo.create( genre_id: 4, video_id: 6)
-GenresVideo.create( genre_id: 4, video_id: 7)
+GenresVideo.create( genre_id: genre_id_1, video_id: video_id_1)
+GenresVideo.create( genre_id: genre_id_1, video_id: video_id_2)
+GenresVideo.create( genre_id: genre_id_1, video_id: video_id_3)
+GenresVideo.create( genre_id: genre_id_1, video_id: video_id_4)
+GenresVideo.create( genre_id: genre_id_1, video_id: video_id_5)
+GenresVideo.create( genre_id: genre_id_1, video_id: video_id_8)
+GenresVideo.create( genre_id: genre_id_1, video_id: video_id_9)
+
+GenresVideo.create( genre_id: genre_id_2, video_id: video_id_2)
+GenresVideo.create( genre_id: genre_id_2, video_id: video_id_3)
+GenresVideo.create( genre_id: genre_id_2, video_id: video_id_6)
+GenresVideo.create( genre_id: genre_id_2, video_id: video_id_8)
+GenresVideo.create( genre_id: genre_id_2, video_id: video_id_9)
+GenresVideo.create( genre_id: genre_id_2, video_id: video_id_5)
+
+
+GenresVideo.create( genre_id: genre_id_3, video_id: video_id_9)
+GenresVideo.create( genre_id: genre_id_3, video_id: video_id_8)
+GenresVideo.create( genre_id: genre_id_3, video_id: video_id_7)
+GenresVideo.create( genre_id: genre_id_3, video_id: video_id_6)
+GenresVideo.create( genre_id: genre_id_3, video_id: video_id_5)
+GenresVideo.create( genre_id: genre_id_3, video_id: video_id_2)
+
+
+GenresVideo.create( genre_id: genre_id_4, video_id: video_id_1)
+GenresVideo.create( genre_id: genre_id_4, video_id: video_id_3)
+GenresVideo.create( genre_id: genre_id_4, video_id: video_id_5)
+GenresVideo.create( genre_id: genre_id_4, video_id: video_id_7)
+GenresVideo.create( genre_id: genre_id_4, video_id: video_id_9)
+GenresVideo.create( genre_id: genre_id_4, video_id: video_id_4)
+GenresVideo.create( genre_id: genre_id_4, video_id: video_id_6)
 
 
 
-
-  ``

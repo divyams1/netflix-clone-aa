@@ -74,15 +74,15 @@ video8 = Video.create( title: 'The Batman', description: "The Batman is an upcom
 vid8 = open('https://netflix-ds-seeds.s3.amazonaws.com/batman.mp4')
 photo8 = open('https://netflix-ds-seeds.s3.amazonaws.com/batman6.jpg')
 
-video8.video.attach(io: vid8, 'batman.mp4')
-video8.photo.attach(io: photo8, 'batman6.jpg')
+video8.video.attach(io: vid8, filename: 'batman.mp4')
+video8.photo.attach(io: photo8, filename: 'batman6.jpg')
 
 video9 = Video.create( title: 'Loki', description: "Loki is an upcoming American television series created by Michael Waldron for the streaming service Disney+, based on the Marvel Comics character of the same name.", time: DateTime.new(2020,2,3,4,5))
 vid9 = open('https://netflix-ds-seeds.s3.amazonaws.com/loki.mp4')
 photo9 = open('https://netflix-ds-seeds.s3.amazonaws.com/loki.png')
 
-video9.photo.attach(io: vid9, 'loki.mp4')
-video9.video.attach(io: photo9, 'loki.png')
+video9.photo.attach(io: vid9, filename: 'loki.mp4')
+video9.video.attach(io: photo9, filename: 'loki.png')
 
 
 #Genre Seed Data 

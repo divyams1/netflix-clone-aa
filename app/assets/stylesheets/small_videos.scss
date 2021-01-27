@@ -164,20 +164,22 @@
     width: 80px;
     text-align: center;
     font-size: xx-small;
-    height: 15px;
+    height: 25px;
     border-radius: 5px;
     font-weight: bold;
+    opacity: 0;
 }
 
 .right-buttons:hover .my-list-hover {
     visibility: visible;
     bottom: 30px;
-    
+    opacity: 1;
+    transition: opacity .5s linear;
 }
 
 .right-buttons {
     margin-left: 5%;
     margin-top: 2%;
     position: relative;
-    transition: transform 300ms ease 100ms;
+    
 }

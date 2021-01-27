@@ -37,9 +37,25 @@ class ShowPageNavBar extends React.Component {
         const x = <FontAwesomeIcon icon={faTimes} size={'1x'} onClick={this.toggleOff} />
         const git = <img className="link-icon github" alt="icon" src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" height={30} width={30}></img>;
          const link = <img  className="link-icon linked" alt="icon" src="https://pngmind.com/wp-content/uploads/2019/08/Linkedin-Logo-Png-Transparent-Background.png" width={30} height = {30} margin-top= {20} ></img>
-        const search = <FontAwesomeIcon icon={faSearch} size={'1x'} onClick={this.toggleSearch} />
-        const searchBar = <div className="search-div-bar"> {search} <input onChange={this.props.updateSearch()} className="search-bar"  placeholder={`Search Titles`}  type="text"></input> {x} </div>
-        const searchShow = this.state.search? searchBar : search
+
+
+
+
+        const search = <FontAwesomeIcon for="toggle" icon={faSearch} size={'1x'} onClick={this.toggleSearch} />
+        const searchBar = <div className="search-div-bar"> {search} <input onChange={this.props.updateSearch()} className="search-bar"  placeholder={`Search Titles`}  type="text"></input> </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        // const searchShow = this.state.search? searchBar : search
         const down = <FontAwesomeIcon icon={faCaretDown} />
         const profiles_drop = Object.keys(this.props.profiles).length > 0 ? ( 
             <div className="dropdown-content">
@@ -72,7 +88,7 @@ class ShowPageNavBar extends React.Component {
                 {myListDiv}
             </div>
             <div className="nav-bar-right">
-                <h2 className="nav-bar-item">{searchShow}</h2> 
+                <h2 className="nav-bar-item">{searchBar}</h2> 
                 <div className="dropdown-hover">
                     <h2 className="nav-bar-item last-item dropbtn"><img className="nav-bar-image" src="https://ih0.redbubble.net/image.618427277.3222/flat,1000x1000,075,f.u2.jpg" />{down}</h2>
                     {profiles_drop}

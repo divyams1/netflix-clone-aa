@@ -33,6 +33,7 @@ class SmallVideo extends React.Component {
         const plus = <FontAwesomeIcon icon={faPlusCircle} size={'2x'} />
         const down = <FontAwesomeIcon icon={faChevronDown} />
         const check = <FontAwesomeIcon icon={faCheck} size={'2x'} />
+       
         const box = ( 
         <div className="big-box">
             <img className="video-image" src={this.props.video.photoUrl} />

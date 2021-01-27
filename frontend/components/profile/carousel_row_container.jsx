@@ -14,7 +14,6 @@ const mSTP = (state,ownProps) => {
 
 const mDTP = dispatch => {
     return {
-        fetchVideos: () => dispatch(fetchVideos()),
         fetchProfile: id => dispatch(fetchProfile()),
         fetchProfiles: () => dispatch(fetchProfiles())
     }

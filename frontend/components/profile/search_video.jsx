@@ -28,7 +28,7 @@ class SearchVideo extends React.Component {
         
         return (
         <div className="search-show">
-            <h3 className="title-search"> Explore titles related to: {searchable} </h3>
+            <h3 className="title-search"> Explore titles related to: {searchable.join(' , ')} </h3>
          <div className="video-search-container">
              {video_carousels}
          </div>   

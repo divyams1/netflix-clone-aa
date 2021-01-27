@@ -2,7 +2,7 @@
 
 ## HeroFlix is a video streaming service that allows users sign up, create induvidual profiles, and browse and watch videos. HeroFlix was built using a Rails backend, a PostgreSQL databse, and a fontend built on React-Redux. The site was hosted on Heroku, and video information was stored on Amazon Web Services.
 
-[Heroflix](https://netflix-clone-a-a.herokuapp.com/)
+[Heroflix](https://hero-flix.herokuapp.com/#/)
 
 
 ## Key Features:
@@ -42,7 +42,7 @@ In order to watch Videos by Genre, a joins table was made between the video and 
 ```
 
 ## Video Effects 
-    ![alt-text](https://im3.ezgif.com/tmp/ezgif-3-b942842ea35f.mp4)
+![alt-text](https://im3.ezgif.com/tmp/ezgif-3-b942842ea35f.mp4)
     In order to make a similar effect to the Netflix videos, CSS was primarily used. The container that stored the video image contained both the image that is displayed and the video that plays on hover with the video having a display of none, so that is is hidden. CSS transition effects were used to increase the size of the container and make the transition smooth, and the display on the video and the image were swapped so that the video would show, while the image would disapear on hover. 
 
 ```CSS 

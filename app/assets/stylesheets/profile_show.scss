@@ -69,6 +69,7 @@ a {
     height: 20px;
 }
 .nav-bar-dropdown-item {
+    margin-left: 5%;
     display: flex;
     align-items: center;
 }
@@ -79,7 +80,7 @@ a {
 }
 
 .dropdown-content {
-  right: 0;
+  right: 35px;
   display: none;
   position: absolute;
   background-color: black;
@@ -98,17 +99,26 @@ a {
 }
 
 .sign-out-button {
+    margin-left: 2%;
     color: white;
     background-color: black;
-    border: none;
+    border: 0;
+     border-top: 2px solid grey;
+     width: 95%;
+     padding-top: 10%;
+     padding-bottom: 2%;
+     text-align: left;
+     font-weight: bold;
 
 }
 .account-button {
     color: white;
     background-color: black;
     border: none;
-    border-top: 2px solid grey;
-    padding-top: 20px;
+    margin-left: 2%;
+    padding-bottom: 5%;
+    font-weight: bold;
+
 }
 
 

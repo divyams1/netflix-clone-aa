@@ -34,14 +34,14 @@ In order to watch Videos by Genre, a joins table was made between the video and 
 ```
     With the associations made, the genre and video data just needed to be added in the json that is sent to the frontend when the backend routes for the videos or the genres are requested. 
 
-```Ruby 
-    json.extract! @genre, :name, :video_ids, :videos 
+    ```Ruby 
+        json.extract! @genre, :name, :video_ids, :videos 
 
-     json.extract! video, :id, :title, :description, :genres
-```
+        json.extract! video, :id, :title, :description, :genres
+    ```
 
-     json.extract! video, :id, :title, :description, :genres
-```
+        json.extract! video, :id, :title, :description, :genres
+    ```
 
 ## Video Effects 
 ![alt-text](https://im3.ezgif.com/tmp/ezgif-3-b942842ea35f.mp4)

@@ -23,7 +23,10 @@ class CarouselRow extends React.Component {
 
   
     render() {
-
+        const allVideos = Object.values(this.props.videos);
+        const genreVideoIds = Object.values(this.props.GenreVideos).map( video => {return video.id });
+        const videosRender = allVideos.filter( video => { return genreVideoIds.includes(video.id )});
+        this.state.videos = videosRender;
         const profileId = this.props.match.params.profileId; 
         const profile = Object.values(this.props.profiles).filter( profile => { return profile.id === parseInt(profileId) } )
         const profileVideos = profile.videos

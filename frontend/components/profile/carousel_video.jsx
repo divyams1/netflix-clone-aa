@@ -19,7 +19,7 @@ class CarouselVideo extends React.Component {
             <h1> {this.props.genre.name} </h1>
             <br></br>
             <div className="carousel-row">
-                <CarouselRowContainer videos={this.props.genre.videos } profiles={this.props.profiles} />
+                <CarouselRowContainer GenreVideos={this.props.genre.videos } profiles={this.props.profiles} />
                 {right_button}
             </div>
             </div>): <div></div>)

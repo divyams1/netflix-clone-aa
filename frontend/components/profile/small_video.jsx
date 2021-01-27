@@ -29,10 +29,10 @@ class SmallVideo extends React.Component {
                         </video>): (  <video onMouseLeave={ ()=> this.setState({ hovered: false }) } onMouseEnter={ () => this.setState({hovered:true}) } className="big-video-image" autoPlay muted  >
                             <source src={this.props.video.videoUrl} type="video/mp4" />
                         </video>)
-        const play = <FontAwesomeIcon icon={faPlayCircle} size={'2x'} />
-        const plus = <FontAwesomeIcon icon={faPlusCircle} size={'2x'} />
+        const play = <FontAwesomeIcon icon={faPlayCircle} size={'1x'} />
+        const plus = <FontAwesomeIcon icon={faPlusCircle} size={'1x'} />
         const down = <FontAwesomeIcon icon={faChevronDown} />
-        const check = <FontAwesomeIcon icon={faCheck} size={'2x'} />
+        const check = <FontAwesomeIcon icon={faCheck} size={'1x'} />
        
         const box = ( 
         <div className="big-box">

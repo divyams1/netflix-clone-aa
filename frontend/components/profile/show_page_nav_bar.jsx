@@ -41,7 +41,7 @@ class ShowPageNavBar extends React.Component {
 
 
 
-        const search = <FontAwesomeIcon for="toggle" icon={faSearch} size={'1x'} onClick={this.toggleSearch} />
+        const search = <FontAwesomeIcon  icon={faSearch} size={'1x'} onClick={this.toggleSearch} />
         const searchBar = <div className="search-div-bar"> {search} <input onChange={this.props.updateSearch()} className="search-bar"  placeholder={`Search Titles`}  type="text"></input> </div>
 
 

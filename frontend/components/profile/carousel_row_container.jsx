@@ -8,7 +8,7 @@ import {withRouter} from 'react-router-dom';
 const mSTP = (state,ownProps) => {
     return {
         videos: state.entities.videos,
-        profiles: state.entities.profiles 
+        profiles: state.entities.profiles
     }
 }
 

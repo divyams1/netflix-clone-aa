@@ -12,9 +12,34 @@
 
 
 ## Development Insights:
-    One of the most difficult challenges was giving users the ability to browse through videos. The main challenge was modifying the order of the videos displayed and finding a way to modify state. A solution to this was storing the videos in the component's state and rotating the array anytime the button to shift videos was clicked. 
+In order to watch Videos by Genre, a joins table was made between the video and the genre, and with the joins table, associations were made between the videos and the genres so that a genre would know what video it belongs to, and a video would be able to have access to the genres it is a part of. 
+```Ruby
+    create_table "genres_videos", id: false, force: :cascade do |t|
+    t.bigint "genre_id", null: false
+    t.bigint "video_id", null: false
+  end
+```
+```Ruby 
+    class Genre < ApplicationRecord 
 
-    ![alt text](https://gyazo.com/17e225235dc4d5cdb37c187529c57f4d)
+        validates :name, presence: true
+
+        has_many :genres_video
+        has_many :videos, :through => :genres_video
+    end 
+    class Video < ApplicationRecord 
+     has_many :genres_video
+     has_many :genres, :through => :genres_video
+    end
+```
+    With the associations made, the genre and video data just needed to be added in the json that is sent to the frontend when the backend routes for the videos or the genres are requested. 
+
+```Ruby 
+    json.extract! @genre, :name, :video_ids, :videos 
+
+     json.extract! video, :id, :title, :description, :genres
+```
+
 
 
 

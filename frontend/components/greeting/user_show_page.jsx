@@ -48,7 +48,7 @@ class UserShowPage extends React.Component {
          const add_button = (this.props.currentUser.profile_ids.length < 5 ? (
                 <div className="add-button-container">
                     <button className="add-button-whole" onClick={this.goAdd}>
-                    <FontAwesomeIcon className="button-div" size='10x' icon={faPlusCircle} />
+                    <FontAwesomeIcon className="button-div" id="add-profile-icon" size='10x' icon={faPlusCircle} />
                     <h2 className="add-prof-button"> Add Profile</h2>
                     </button>
                    
@@ -58,7 +58,7 @@ class UserShowPage extends React.Component {
             const prof = this.props.profiles[id-1];
             if (prof) {
             return <div key={idx}  >
-                <Link  to={{pathname: `/profiles/${prof.id}`, state: {profiles: this.props.profiles} }} >
+                <Link className="add-profile-cont-whole" to={{pathname: `/profiles/${prof.id}`, state: {profiles: this.props.profiles} }} >
                     <img className="button-div" src="https://i.pinimg.com/originals/0d/dc/ca/0ddccae723d85a703b798a5e682c23c1.png" />
                     <h2 className="profile-name-text-show" > {prof.name} </h2>
                 </Link> 

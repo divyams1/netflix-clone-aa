@@ -56,7 +56,7 @@ class ShowPageNavBar extends React.Component {
 
 
         // const searchShow = this.state.search? searchBar : search
-        const down = <FontAwesomeIcon icon={faCaretDown} />
+        const down = <FontAwesomeIcon id="nav-bar-down" icon={faCaretDown} />
         const profiles_drop = Object.keys(this.props.profiles).length > 0 ? ( 
             <div className="dropdown-content">
                 {this.props.currentUser.profile_ids.map( (id, idx) => {

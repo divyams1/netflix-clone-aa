@@ -30,7 +30,6 @@ class MainVideo extends React.Component {
                         <h2 className="big-video-desc">{Object.values(this.props.videos)[0].description}</h2>
                         <div className="main-video-buttons">
                             <button className="play-vid-button" onClick={this.playClick} > {play} Play </button>
-                            <button className="info-vid-button"> {info} More Info </button>
                         </div>
                     </div>
                 </div>)

@@ -34,15 +34,15 @@ class UserShowPage extends React.Component {
         e.preventDefault();
         this.props.history.push('/add')
     }
-    shouldComponentUpdate(nextProps,nextState) {
-        return true;
-    }
+    // shouldComponentUpdate(nextProps,nextState) {
+    //     return true;
+    // }
 
-    componentDidUpdate(prevProps, prevState) {
-        if ( Object.values(prevProps.profiles).length !== Object.values(this.props.profiles).length ) {
-            this.props.fetchProfiles();
-        }
-    }
+    // componentDidUpdate(prevProps, prevState) {
+    //     if ( Object.values(prevProps.profiles).length !== Object.values(this.props.profiles).length ) {
+    //         this.props.fetchProfiles();
+    //     }
+    // }
     render() {
         
          const add_button = (this.props.currentUser.profile_ids.length < 5 ? (

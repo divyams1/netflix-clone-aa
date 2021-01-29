@@ -32,11 +32,13 @@ class myList extends React.Component {
         const videos = this.state[0].videos;
         const profileId = this.props.match.params.profileId; 
         const profiles = this.state[2].profiles;
-        
         const profile = Object.values(profiles).filter( profile => { return profile.id === parseInt(profileId) })
         let containers = <div></div>
         if (profile.length > 0)  {
-            containers = profile[0].videos.map( (video, idx)  => {
+            const profileVideos = profile[0].videos;
+            const videosWithGenres = profileVideos.map( video => { return video.id });
+            const newVideos = videos.filter( video => { return videosWithGenres.includes(video.id) })
+            containers = newVideos.map( (video, idx)  => {
                 return <SmallVideoContainer video={video} key={idx} />
             })
         }

@@ -5,15 +5,14 @@ import SessionForm from './session_form';
 
 const mSTP = (state, ownProps) => {
     return {
-        errors: [],
+        errors: state.entities.errors,
         formType: 'signup'
     }
 }
 
 const mDTP = (dispatch, ownProps) => {
     return {
-        processForm: user => dispatch(Signup(user)),
-        removeErrors: () => dispatch(removeErrors())
+        processForm: user => dispatch(Signup(user))
     }
 }
 

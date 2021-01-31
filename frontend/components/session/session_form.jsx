@@ -28,25 +28,23 @@ class SessionForm extends React.Component {
             this.setState( { [field]: e.currentTarget.value })
         }
     }
-    componentWillUnmount() {
-        this.props.removeErrors();
-    }
+    // componentWillUnmount() {
+    //     this.props.removeErrors();
+    // }
 
     render() {
-        
-        const errors =  this.props.errors.map( (error, idx) => {
+        const signUp = this.props.errors.signup || [];
+        const signInErrors = this.props.errors.login || [];
+        const errors =  signInErrors.map( (error, idx) => {
             return (<div key={idx} className="error-container">
                 <p className="error-text"> {error} </p>
             </div>) 
         })
-        const signinErrors =  this.props.errors.map( (error,idx) => {
+        const signUpErrors =  signUp.map( (error,idx) => {
             return (<div key={idx} className="error-container">
                 <p className="error-text-sign-in"> {error} </p>
             </div>) 
         })
-        if (signinErrors[0] === "Invalid username or password") {
-            signinErrors = <div></div>;
-        }
         const display = ( (this.props.formType === 'login') ? (
             <div className ='login-page'>
                 <div>
@@ -97,7 +95,7 @@ class SessionForm extends React.Component {
                             <p className="email-text"> {this.state.email} </p>
                             <br className="loginbreak" ></br>
                             <input type='password' className="signup-input" value={this.state.password} placeholder="Enter your password" onChange={this.handleInput('password')}/>
-                            {signinErrors}
+                            {signUpErrors}
                             <br className="loginbreak"></br>
                         <button className="signup-btn-last" onClick = {this.handleSubmit}> CONTINUE </button>
                         

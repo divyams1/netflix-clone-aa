@@ -7,6 +7,7 @@
     color: red;
     font-family: 'Bebas Neue', cursive;
     font-size: 50px;
+    margin-top: 0;
 }
 .session-form {
     background-color: black;
@@ -29,6 +30,10 @@
 
 .login-page-text {
     color: white;
+}
+
+.login-page-header { 
+    margin-left: 3%;
 }
 
 .login-container {
@@ -81,4 +86,8 @@
 .sign-up-link {
     margin-right: 8%;
     text-align: center;
+}
+
+.sign-up-header-heroflix {
+    margin-top: 10%;
 }

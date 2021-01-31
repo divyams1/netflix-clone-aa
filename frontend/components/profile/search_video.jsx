@@ -11,8 +11,7 @@ class SearchVideo extends React.Component {
     render() {
         const videos_to_render = Object.values(this.props.videos).filter( video => {
              const length = this.props.search.length;
-             return video.title.slice(0,length) === this.props.search; 
-
+             return video.title.toLowerCase().includes(this.props.search.toLowerCase());
         })
        
         let video_carousels = videos_to_render.map( (video,idx) => {

@@ -28,29 +28,36 @@ class SessionForm extends React.Component {
             this.setState( { [field]: e.currentTarget.value })
         }
     }
+    componentWillUnmount() {
+        this.props.removeErrors();
+    }
 
     render() {
-       
-        const errors =  this.props.errors.map( error => {
-            return (<div className="error-container">
+        
+        const errors =  this.props.errors.map( (error, idx) => {
+            return (<div key={idx} className="error-container">
                 <p className="error-text"> {error} </p>
             </div>) 
         })
-        const signinErrors =  this.props.errors.map( error => {
-            return (<div className="error-container">
+        const signinErrors =  this.props.errors.map( (error,idx) => {
+            return (<div key={idx} className="error-container">
                 <p className="error-text-sign-in"> {error} </p>
             </div>) 
         })
-        
+        if (signinErrors[0] === "Invalid username or password") {
+            signinErrors = <div></div>;
+        }
         const display = ( (this.props.formType === 'login') ? (
             <div className ='login-page'>
                 <div>
+                    <Link to="/">
                     <h1 className="loginNetflix"> HeroFlix </h1>
+                    </Link>
                 </div>
                 <div className="login-container">
                     <div className = 'session-form'>
                         <form>
-                            <h1 className="login-page-text"> Sign In </h1>
+                            <h1 className="login-page-text login-page-header"> Sign In </h1>
                             { errors[0] }
                             <br></br>
                             <label>

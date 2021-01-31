@@ -21,17 +21,20 @@ class SignUpNoEmail extends React.Component {
         }
     }
     render() {
-        const errors =  this.props.errors.map( error => {
-            return (<div className="error-container">
+        const errors =  this.props.errors.map( (error,idx) => {
+            return (<div key={idx} className="error-container">
                 <p className="error-text"> {error} </p>
             </div>) 
         })
+        if ( errors[0]=== "Invalid username or password") {
+            errors = <div></div>
+        }
         const display = (<div className="signup-page">
                     <div className="signup-header">
                         
                         <div>
                             <Link to='/'>
-                            <h1 className="loginNetflix"> HeroFlix </h1>
+                            <h1 className="loginNetflix sign-up-header-heroflix"> HeroFlix </h1>
                             </Link>
                         </div>
                         <Link className="login-text-link" to='/login'> <h2 className="sign-up-link" >Sign In</h2></Link>

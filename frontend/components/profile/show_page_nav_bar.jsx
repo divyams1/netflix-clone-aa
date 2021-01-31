@@ -35,7 +35,7 @@ class ShowPageNavBar extends React.Component {
     }
     render() {
         const x = <FontAwesomeIcon icon={faTimes} size={'1x'} onClick={this.toggleOff} />
-        const git = <img target="_blank" className="link-icon github" alt="icon" src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" height={30} width={30}></img>;
+        const git = <img  className="link-icon github" alt="icon" src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" height={30} width={30}></img>;
          const link = <img  target="_blank" className="link-icon linked" alt="icon" src="https://pngmind.com/wp-content/uploads/2019/08/Linkedin-Logo-Png-Transparent-Background.png" width={30} height = {30} margin-top= {20} ></img>
 
 
@@ -83,8 +83,8 @@ class ShowPageNavBar extends React.Component {
                 <Link to={`/profiles/${this.props.profileId}`}>
                 <h1 className="netflix-text netflix-text-navbar"> HeroFlix </h1>
                 </Link>
-                <a  className="nav-bar-link" href="https://github.com/divyams1"> {git} </a>
-                <a  className="nav-bar-link"href="https://www.linkedin.com/in/divyam-satyarthi-b6628513b/"> {link} </a>
+                <a  className="nav-bar-link" target="_blank" href="https://github.com/divyams1"> {git} </a>
+                <a  className="nav-bar-link" target="_blank" href="https://www.linkedin.com/in/divyam-satyarthi-b6628513b/"> {link} </a>
                 {myListDiv}
             </div>
             <div className="nav-bar-right">

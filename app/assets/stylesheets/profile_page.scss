@@ -57,9 +57,13 @@
     font-size: 50px;
 }
 
-.my-list-link:visited {
-    text-decoration: none;
+.my-list-link {
     color: white; 
+    font-size: small;
+    font-weight: bold; 
+    font-family: 'Lato', sans-serif;
+    margin-top: 2%;
+
 }
 
 .my-list-link:visited {

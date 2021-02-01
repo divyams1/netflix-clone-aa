@@ -66,7 +66,7 @@ class SessionForm extends React.Component {
                                 <input type='password' className="login-input"  value={this.state.password} placeholder="Enter your password" onChange={this.handleInput('password')}/>
                             </label>
                             <br></br>
-                            <button className="signin-btn signin-login-btn" onClick = {this.handleSubmit}> Sign In </button>
+                            <button className=" signin-login-btn signin-btn" onClick = {this.handleSubmit}> Sign In </button>
                              <p className="login-page-text"> New to HeroFlix? <Link className="login-text-link" to="/signup">Sign up now.</Link></p>
                              
                         </form>

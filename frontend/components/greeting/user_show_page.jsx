@@ -30,21 +30,14 @@ class UserShowPage extends React.Component {
         this.setState({addPage: false})
     }
 
+
+
     goAdd(e) {
         e.preventDefault();
         this.props.history.push('/add')
     }
-    // shouldComponentUpdate(nextProps,nextState) {
-    //     return true;
-    // }
 
-    // componentDidUpdate(prevProps, prevState) {
-    //     if ( Object.values(prevProps.profiles).length !== Object.values(this.props.profiles).length ) {
-    //         this.props.fetchProfiles();
-    //     }
-    // }
     render() {
-        
          const add_button = (this.props.currentUser.profile_ids.length < 5 ? (
                 <div className="add-button-container">
                     <button className="add-button-whole" onClick={this.goAdd}>
@@ -54,18 +47,31 @@ class UserShowPage extends React.Component {
                    
                 </div>
             ): ( <div></div> ))
-        const profiles = this.props.currentUser.profile_ids.map( (id,idx) => {
-            const prof = this.props.profiles[id-1];
-            if (prof) {
-            return <div key={idx}  >
-                <Link className="add-profile-cont-whole" to={{pathname: `/profiles/${prof.id}`, state: {profiles: this.props.profiles} }} >
+        // const profiles = this.props.currentUser.profile_ids.map( (id,idx) => {
+        //     const prof = this.props.profiles[id-1];
+        //     if (prof) {
+        //     return <div key={idx}  >
+        //         <Link className="add-profile-cont-whole" to={{pathname: `/profiles/${prof.id}`, state: {profiles: this.props.profiles} }} >
+        //             <img className="button-div" src="https://i.pinimg.com/originals/0d/dc/ca/0ddccae723d85a703b798a5e682c23c1.png" />
+        //             <h2 className="profile-name-text-show" > {prof.name} </h2>
+        //         </Link> 
+        //     </div>
+        //     }
+           
+        // })
+       
+        const profiles = Object.values(this.props.profiles).filter( (profile) => {
+            return profile.user_id === this.props.currentUser.id;
+        }) 
+        const profilesShow = profiles.map( (profile, idx) => {
+                   return <div key={idx}  >
+                <Link className="add-profile-cont-whole" to={{pathname: `/profiles/${profile.id}`, state: {profiles: this.props.profiles} }} >
                     <img className="button-div" src="https://i.pinimg.com/originals/0d/dc/ca/0ddccae723d85a703b798a5e682c23c1.png" />
-                    <h2 className="profile-name-text-show" > {prof.name} </h2>
+                    <h2 className="profile-name-text-show" > {profile.name} </h2>
                 </Link> 
             </div>
-            }
-           
         })
+ 
         const show_profiles = (  <div className="profiles-page">
                 <h1 className="netflix-text profile-header-text"> HeroFlix </h1>
                 <div className="profiles-header">
@@ -73,7 +79,7 @@ class UserShowPage extends React.Component {
                 </div>
                 <div className="profiles-col">
                     
-                    {profiles}
+                    {profilesShow}
                     {add_button}
                 </div>
                 

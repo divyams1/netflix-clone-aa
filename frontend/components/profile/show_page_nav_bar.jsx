@@ -57,13 +57,17 @@ class ShowPageNavBar extends React.Component {
 
         // const searchShow = this.state.search? searchBar : search
         const down = <FontAwesomeIcon id="nav-bar-down" icon={faCaretDown} />
+        let allProfiles = this.props.profiles || [];
+        const profiles = Object.values(allProfiles).filter((profile) => {
+            return profile.user_id === this.props.currentUser.id
+        } )
         const profiles_drop = Object.keys(this.props.profiles).length > 0 ? ( 
             <div className="dropdown-content">
-                {this.props.currentUser.profile_ids.map( (id, idx) => {
+                {profiles.map( (profile, idx) => {
                     return <div className="single-div-dropdown" key={idx}>
-                                <Link to={`/profiles/${id}`}>
+                                <Link to={`/profiles/${profile.id}`}>
                                     <div className="nav-bar-dropdown-item">
-                                    <p className="nav-bar-dropdown-text"> {this.props.profiles[id-1].name}  </p>
+                                    <p className="nav-bar-dropdown-text"> {profile.name}  </p>
                                     <img className="nav-bar-dropdown-image" src="https://ih0.redbubble.net/image.618427277.3222/flat,1000x1000,075,f.u2.jpg" />
                                     </div>
                                 </Link>

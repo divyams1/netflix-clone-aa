@@ -13,12 +13,17 @@ class AddProfile extends React.Component {
         this.props.fetchProfiles();
     }
 
+    wait()  {
+        this.props.history.push('/')
+    }
+
     handleSubmit(e)  {
         e.preventDefault();
-        this.props.createProfile(this.state.profile)
         const new_id = Object.values(this.props.profiles).length;
-        this.props.history.push(`/profiles/${new_id}`)
-
+        this.props.createProfile(this.state.profile)
+            .then( (profile) => this.props.history.push('/'))
+        // then( this.props.history.push('/')  )
+        // `/profiles/${new_id}`
     }
 
     cancel(e) {

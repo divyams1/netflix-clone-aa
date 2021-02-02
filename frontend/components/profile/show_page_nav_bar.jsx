@@ -78,7 +78,7 @@ class ShowPageNavBar extends React.Component {
             </div>
         ) : ( <div></div>);
         const myListDiv = (   <Link className="my-list-link" to={`/profiles/${this.props.profileId}/myList`}>
-                    <p> My List </p>
+                    <p className="my-list-text"> My List </p>
                 </Link>)
         
         return(
@@ -89,6 +89,9 @@ class ShowPageNavBar extends React.Component {
                 </Link>
                 <a  className="nav-bar-link" target="_blank" href="https://github.com/divyams1"> {git} </a>
                 <a  className="nav-bar-link" target="_blank" href="https://www.linkedin.com/in/divyam-satyarthi-b6628513b/"> {link} </a>
+
+                <a className="my-list-link portfolio-link" target="_blank" href="https://divyams1.github.io/divyam-satyarthi/"> Portfolio </a>
+              
                 {myListDiv}
             </div>
             <div className="nav-bar-right">

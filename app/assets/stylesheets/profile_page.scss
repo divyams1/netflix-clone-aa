@@ -62,11 +62,18 @@
     font-size: small;
     font-weight: bold; 
     font-family: 'Lato', sans-serif;
-    margin-top: 2%;
+    
 
 }
 
 .my-list-link:visited {
     text-decoration: none;
     color: white;
+}
+.portfolio-link {
+    margin-right: 2%;
+}
+
+.my-list-text {
+    width: 50px;
 }

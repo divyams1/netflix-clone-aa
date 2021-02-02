@@ -12,3 +12,10 @@ export const makeVideoProfile = videoProfile => {
         data: { video_profile: videoProfile }
     })
 }
+
+export const deleteVideoProfile = videoProfileId => {
+    return $.ajax({
+        method: "DELETE",
+        url: `/api/video_profiles/${videoProfileId}`,
+    })
+}

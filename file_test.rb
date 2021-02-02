@@ -6,8 +6,8 @@ class Video < ApplicationRecord
 
 end 
 
-puts Dir.pwd
-video = Video.first 
-file = File.open('C:\FullStackVideos')
-video.video.attach(io: file, filename: 'The_Boys')
-video.video.attached?
+# puts Dir.pwd
+# video = Video.first 
+# file = File.open('C:\FullStackVideos')
+# video.video.attach(io: file, filename: 'The_Boys')
+# video.video.attached?

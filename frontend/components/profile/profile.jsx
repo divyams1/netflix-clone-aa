@@ -35,7 +35,7 @@ class Profile extends React.Component {
             return <CarouselVideoContainer key={idx} genre={genre} profiles={this.props.profiles} />
         })) : <div></div> )
         const display = ( Object.values(this.props.profiles).length === 0 ? (<div> Hello </div>): (<div> Hello {this.props.profiles[this.props.match.params.profileId -1].name}</div>)) 
-        const renderVideo = this.state.search?   <SearchVideoContainer searchOff={this.searchOff} videos={this.props.videos} search={this.state.currentSearch} />: (<React.Fragment> <MainVideoContainer /> {genre_conts} </React.Fragment>) ;
+        const renderVideo = this.state.search?   <SearchVideoContainer searchOff={this.searchOff} videos={this.props.videos} search={this.state.currentSearch} />: (<React.Fragment> <MainVideoContainer /> {genre_conts[0]} </React.Fragment>) ;
         return(
             <div className="profile-show ">
                 <div>

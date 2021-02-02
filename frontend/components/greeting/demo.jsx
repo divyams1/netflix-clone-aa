@@ -16,7 +16,9 @@ class Demo extends React.Component {
         
         const demoDisplay = (  <div className ='login-page'>
                 <div>
+                    <Link to="/">
                     <h1 className="loginNetflix"> HeroFlix </h1>
+                    </Link>
                 </div>
                 <div className="login-container">
                     <div className = 'session-form'>

@@ -35,8 +35,8 @@ class ShowPageNavBar extends React.Component {
     }
     render() {
         const x = <FontAwesomeIcon icon={faTimes} size={'1x'} onClick={this.toggleOff} />
-        const git = <img  className="link-icon github" alt="icon" src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" height={30} width={30}></img>;
-         const link = <img  target="_blank" className="link-icon linked" alt="icon" src="https://pngmind.com/wp-content/uploads/2019/08/Linkedin-Logo-Png-Transparent-Background.png" width={30} height = {30} margin-top= {20} ></img>
+        const git = <img  className="link-icon github" alt="icon" src="https://image.flaticon.com/icons/png/512/174/174857.png" height={30} width={30}></img>;
+         const link = <img  target="_blank" className="link-icon linked" alt="icon" src="https://img.pngio.com/git-logo-downloads-github-logo-png-383_383.png" width={30} height = {30} margin-top= {20} ></img>
 
 
 

@@ -77,12 +77,12 @@ photo8 = open('https://netflix-ds-seeds.s3.amazonaws.com/batman6.jpg')
 video8.video.attach(io: vid8, filename: 'batman.mp4')
 video8.photo.attach(io: photo8, filename: 'batman6.jpg')
 
-video9 = Video.create( title: 'Loki', description: "Loki is an upcoming American television series created by Michael Waldron for the streaming service Disney+, based on the Marvel Comics character of the same name.", time: DateTime.new(2020,2,3,4,5))
-vid9 = open('https://netflix-ds-seeds.s3.amazonaws.com/loki.mp4')
-photo9 = open('https://netflix-ds-seeds.s3.amazonaws.com/loki.png')
+# video9 = Video.create( title: 'Loki', description: "Loki is an upcoming American television series created by Michael Waldron for the streaming service Disney+, based on the Marvel Comics character of the same name.", time: DateTime.new(2020,2,3,4,5))
+# vid9 = open('https://netflix-ds-seeds.s3.amazonaws.com/loki.mp4')
+# photo9 = open('https://netflix-ds-seeds.s3.amazonaws.com/loki.png')
 
-video9.photo.attach(io: vid9, filename: 'loki.mp4')
-video9.video.attach(io: photo9, filename: 'loki.png')
+# video9.photo.attach(io: vid9, filename: 'loki.mp4')
+# video9.video.attach(io: photo9, filename: 'loki.png')
 
 
 #Genre Seed Data 
@@ -115,17 +115,17 @@ GenresVideo.create( genre_id: genre_id_1, video_id: video_id_3)
 GenresVideo.create( genre_id: genre_id_1, video_id: video_id_4)
 GenresVideo.create( genre_id: genre_id_1, video_id: video_id_5)
 GenresVideo.create( genre_id: genre_id_1, video_id: video_id_8)
-GenresVideo.create( genre_id: genre_id_1, video_id: video_id_9)
+# GenresVideo.create( genre_id: genre_id_1, video_id: video_id_9)
 
 GenresVideo.create( genre_id: genre_id_2, video_id: video_id_2)
 GenresVideo.create( genre_id: genre_id_2, video_id: video_id_3)
 GenresVideo.create( genre_id: genre_id_2, video_id: video_id_6)
 GenresVideo.create( genre_id: genre_id_2, video_id: video_id_8)
-GenresVideo.create( genre_id: genre_id_2, video_id: video_id_9)
+# GenresVideo.create( genre_id: genre_id_2, video_id: video_id_9)
 GenresVideo.create( genre_id: genre_id_2, video_id: video_id_5)
 
 
-GenresVideo.create( genre_id: genre_id_3, video_id: video_id_9)
+# GenresVideo.create( genre_id: genre_id_3, video_id: video_id_9)
 GenresVideo.create( genre_id: genre_id_3, video_id: video_id_8)
 GenresVideo.create( genre_id: genre_id_3, video_id: video_id_7)
 GenresVideo.create( genre_id: genre_id_3, video_id: video_id_6)
@@ -137,7 +137,7 @@ GenresVideo.create( genre_id: genre_id_4, video_id: video_id_1)
 GenresVideo.create( genre_id: genre_id_4, video_id: video_id_3)
 GenresVideo.create( genre_id: genre_id_4, video_id: video_id_5)
 GenresVideo.create( genre_id: genre_id_4, video_id: video_id_7)
-GenresVideo.create( genre_id: genre_id_4, video_id: video_id_9)
+# GenresVideo.create( genre_id: genre_id_4, video_id: video_id_9)
 GenresVideo.create( genre_id: genre_id_4, video_id: video_id_4)
 GenresVideo.create( genre_id: genre_id_4, video_id: video_id_6)
 

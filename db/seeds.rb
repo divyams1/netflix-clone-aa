@@ -106,7 +106,7 @@ video_id_5 = video5.id
 video_id_6 = video6.id
 video_id_7 = video7.id
 video_id_8 = video8.id
-video_id_9 = video9.id
+# video_id_9 = video9.id
 
 #Genre Video Seed Data 
 GenresVideo.create( genre_id: genre_id_1, video_id: video_id_1)

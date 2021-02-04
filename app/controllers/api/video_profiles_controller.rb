@@ -19,6 +19,7 @@ class Api::VideoProfilesController < ApplicationController
     def destroy 
         video_profile = VideoProfile.find(params[:id])
         video_profile.destroy
+        render json: video_profile 
 
     end 
 

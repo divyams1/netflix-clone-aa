@@ -13,7 +13,7 @@ class myList extends React.Component {
         const promises = Promise.all( [this.props.fetchVideos(), this.props.fetchVideoProfiles(), this.props.fetchProfiles() ])
         promises 
             .then( (results) => { this.setState( results )})
- 
+
         
     }
       updateSearch() {
@@ -29,17 +29,20 @@ class myList extends React.Component {
     }
 
     render() { 
+        const videoProfiles = this.state[1].videoProfiles;
         const videos = this.state[0].videos;
         const profileId = this.props.match.params.profileId; 
         const profiles = this.state[2].profiles;
         const profile = Object.values(profiles).filter( profile => { return profile.id === parseInt(profileId) })
         let containers = <div></div>
+        const userProfiles = videoProfiles.filter( videoProfile => { return videoProfile.profile_id === parseInt(profileId) });
         if (profile.length > 0)  {
             const profileVideos = profile[0].videos;
             const videosWithGenres = profileVideos.map( video => { return video.id });
             const newVideos = videos.filter( video => { return videosWithGenres.includes(video.id) })
             containers = newVideos.map( (video, idx)  => {
-                return <SmallVideoContainer video={video} key={idx} />
+                const videoProfile = userProfiles.filter( profile => { return profile.video_id === video.id } )
+                return <SmallVideoContainer videoProfile={videoProfile} videoProfileIds={videosWithGenres} video={video} key={idx} />
             })
         }
         return( 

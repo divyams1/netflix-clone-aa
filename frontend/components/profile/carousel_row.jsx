@@ -19,8 +19,6 @@ class CarouselRow extends React.Component {
         let currentCount = this.state.count;
         this.setState( { count: (currentCount+1)})
     }
-
-
     componentDidMount() {
         this.props.fetchProfiles()
     }
@@ -33,7 +31,6 @@ class CarouselRow extends React.Component {
         const genreVideoIds = Object.values(this.props.GenreVideos).map( video => {return video.id });
         let videosRender = allVideos.filter( video => { return genreVideoIds.includes(video.id )});
         videosRender = videosRender.concat(videosRender);
-        
         this.state.videos = videosRender;
         const profileId = this.props.match.params.profileId; 
         const profile = Object.values(this.props.profiles).filter( profile => { return profile.id === parseInt(profileId) } )
@@ -41,11 +38,13 @@ class CarouselRow extends React.Component {
         const right = <FontAwesomeIcon icon={faChevronRight} size={'3x'} />
         const left = <FontAwesomeIcon icon={faChevronLeft} />
         let length = Object.values(this.state.videos).length;
-
-        let videos_to_render = this.state.videos.slice((this.state.count),(this.state.count + 6));
+        let videos_to_render = this.state.videos.slice((this.state.count),(this.state.count + 6)); 
+        const videoProfile = Object.values(this.props.videoProfiles).filter( videoProfile => {
+            return videoProfile.profile_id === parseInt(profileId)
+        })
         const videos = videos_to_render.map( (video, idx) => {
           
-            return <SmallVideoContainer key={idx} video={video} listVideos={profileVideos} />
+            return <SmallVideoContainer videoProfile={videoProfile} videoProfileIds={this.props.videoProfileIds} key={video.title+"profile"} video={video} listVideos={profileVideos} />
         })
         return (
             <React.Fragment>

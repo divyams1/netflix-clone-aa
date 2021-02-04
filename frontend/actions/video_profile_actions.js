@@ -1,6 +1,7 @@
 export const RECEIVE_VIDEO_PROFILES = "RECEIVE_VIDEO_PROFILES";
 export const RECEIVE_VIDEO_PROFILE = "RECEIVE_VIDEO_PROFILE";
-import { getVideoProfiles, makeVideoProfile } from '../util/video_profile_util';
+export const DELETE_VIDEO_PROFILE = "DELETE_VIDEO_PROFILE";
+import { getVideoProfiles, makeVideoProfile, deleteVideoProfile } from '../util/video_profile_util';
 
 export const receiveVideoProfiles = videoProfiles => {
     return {
@@ -16,7 +17,12 @@ export const receiveVideoProfile = videoProfile => {
     }
 }
 
-
+export const removeVideoProfile = videoProfile => {
+    return {
+        type: DELETE_VIDEO_PROFILE, 
+        videoProfile
+    }
+}
 
 export const fetchVideoProfiles = () => dispatch => {
     return getVideoProfiles()
@@ -26,4 +32,9 @@ export const fetchVideoProfiles = () => dispatch => {
 export const createVideoProfile = profile => dispatch => {
     return makeVideoProfile(profile)
         .then( profile => dispatch(receiveVideoProfile(profile)));
+}
+
+export const deleteVideoProfileAct = id => dispatch => {
+    return deleteVideoProfile(id)
+        .then( videoProfile =>  removeVideoProfile(videoProfile))
 }

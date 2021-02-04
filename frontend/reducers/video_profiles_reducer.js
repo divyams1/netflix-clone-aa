@@ -11,14 +11,15 @@ const videoProfilesReducer = ( state= {}, action ) => {
         case DELETE_VIDEO_PROFILE:
             let nextState = Object.assign( {}, state);
             let ids = [];
-            Object.values(nextState).map( videoProfile => {
-                if ( videoProfile.id === action.videoProfile.id) {
-                    ids.push( videoProfile.id);
+            Object.entries(nextState).map( videoProfile => {
+                if ( videoProfile[1].id === action.videoProfile.id) {
+                    ids.push( videoProfile[0]);
                 }
             })
             ids.map( id => {
                 delete nextState[id]
             })
+    
             return nextState;
         default:
             return state;  

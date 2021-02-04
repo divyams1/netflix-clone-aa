@@ -38,6 +38,7 @@ class SmallVideo extends React.Component {
      
     }
     render() {
+        
         let videoProfile = this.props.videoProfile.filter( videoProfile => { return  videoProfile.video_id === this.props.video.id})
         this.state.videoProfile = videoProfile[0] || {};
         if ( this.state.isChanged) {

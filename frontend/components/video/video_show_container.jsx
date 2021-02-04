@@ -2,6 +2,7 @@ import {connect} from 'react-redux';
 import {fetchVideo, fetchVideos} from '../../actions/video_actions';
 import VideoShow from './video_show'
 import {withRouter} from 'react-router-dom'
+import { fetchProfile, fetchProfiles} from '../../actions/profile_actions';
 
 const mSTP = (state,ownProps) => {
     return {
@@ -14,7 +15,8 @@ const mSTP = (state,ownProps) => {
 const mDTP = dispatch => {
     return {
         fetchVideo: (videoId) => dispatch(fetchVideo(videoId)),
-        fetchVideos: () => dispatch(fetchVideos())
+        fetchVideos: () => dispatch(fetchVideos()),
+        fetchProfiles: () => dispatch(fetchProfiles())
     }
 }
 

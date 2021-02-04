@@ -11,7 +11,7 @@ class Api::ProfilesController < ApplicationController
     end 
 
     def index 
-        @profiles = Profile.all.includes(:user)
+        @profiles = Profile.all.includes(:user).includes(:videos)
         render :index
     end 
 

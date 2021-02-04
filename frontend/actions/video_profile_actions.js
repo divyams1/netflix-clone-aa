@@ -36,5 +36,5 @@ export const createVideoProfile = profile => dispatch => {
 
 export const deleteVideoProfileAct = id => dispatch => {
     return deleteVideoProfile(id)
-        .then( videoProfile =>  removeVideoProfile(videoProfile))
+        .then( videoProfile =>  dispatch(removeVideoProfile(videoProfile)));
 }

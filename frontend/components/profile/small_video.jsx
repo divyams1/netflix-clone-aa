@@ -13,7 +13,7 @@ class SmallVideo extends React.Component {
     }
 
     playClick() {
-        this.props.history.push(`/videos/${this.props.video.id}`)
+        this.props.history.push(`${this.state.profileId}/videos/${this.props.video.id}`)
     }
 
 
@@ -38,7 +38,6 @@ class SmallVideo extends React.Component {
      
     }
     render() {
-    
         let videoProfile = this.props.videoProfile.filter( videoProfile => { return  videoProfile.video_id === this.props.video.id})
         this.state.videoProfile = videoProfile[0] || {};
         if ( this.state.isChanged) {

@@ -43,8 +43,7 @@ class CarouselRow extends React.Component {
             return videoProfile.profile_id === parseInt(profileId)
         })
         const videos = videos_to_render.map( (video, idx) => {
-          
-            return <SmallVideoContainer videoProfile={videoProfile} videoProfileIds={this.props.videoProfileIds} key={video.title+"profile"} video={video} listVideos={profileVideos} />
+            return <SmallVideoContainer videoProfile={videoProfile} videoProfileIds={this.props.videoProfileIds} key={video.title+'Profile'} video={video} listVideos={profileVideos} />
         })
         return (
             <React.Fragment>

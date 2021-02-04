@@ -19,7 +19,7 @@ const App = () => {
         <Route path="/signup/:email" exact component={SignupFormContainer} />
         <Route path='/demo' exact component={DemoContainer} />
         <Route path='/profiles/:profileId' exact component={ProfileContainer} />
-        <Route path='/videos/:videoId' exact component={VideoShowContainer} />
+        <Route path='/profiles/:profileId/videos/:videoId' exact component={VideoShowContainer} />
         <Route path='/add' exact component={AddProfileContainer} />
         <Route path="/signup" exact component={SignUpNoEmailContainer} />
         <Route path="/profiles/:profileId/myList" exact component={MyListContainer} />

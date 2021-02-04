@@ -15,23 +15,22 @@ class VideoShow extends React.Component {
     componentDidMount() {
         
        this.props.fetchVideos();
-       
+       this.props.fetchProfiles();
     
     }
 
     toggleShow() {
-        if ( this.state.show ) {
+        if ( this.state.show === true  ) {
             this.setState({show: false})
         } else {
             this.setState({show: true})
         }
+    
     }
 
     back() {
-        const profileId = this.props.profiles[0].id
-        this.props.fetchVideos();
-        
-        this.props.history.push(`/profiles/${profileId}`)
+        const id = this.props.match.params.profileId; 
+        this.props.history.push(`/profiles/${id}`)
     }
 
     render() {
@@ -43,29 +42,28 @@ class VideoShow extends React.Component {
         const videoTitle = video.title 
         const videoDescrpition = video.description 
         const videoUrl = video.videoUrl
-        // const title =  (this.state.show ? (    <div className="show-video-title">
-        //                 <h1> {videoTitle} </h1>
-        //             </div>): <div></div>);
         const description = ( this.state.show? ( <div className="show-video-desc">
             <FontAwesomeIcon onClick={this.back} icon={faChevronLeft} className="backbutton" />
             <br className="height-div"></br>
             <h1> {videoTitle} </h1>
             <p> {videoDescrpition} </p>
         </div>) : (<div></div>))
-        
+        const videoDisplay = (  <video className="show-video">
+                     <source src={videoUrl} />
+                </video>)
+
         const display = ( this.props.videos?   (
-            <div key={videoTitle}>
-                <video className="show-video"  controls onClick={this.toggleShow}>
+            <div key={videoTitle} onClick={this.toggleShow}>
+                <video className="show-video"  controls  >
                      <source src={videoUrl} />
                 </video>
-                    {/* {backImage} */}
-                    {/* {title} */}
+
                     {description}
                 </div>
                 
             ) : <div></div> )
         return (
-        <div className="show-video">
+        <div className="show-video" >
           {display}
         </div>
         )

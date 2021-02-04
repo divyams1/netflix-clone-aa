@@ -9,12 +9,13 @@ class MainVideo extends React.Component {
         super(props);
         this.playClick  = this.playClick.bind(this);
     }
-    componentDidMount() {
-        this.props.fetchVideos();
-    }
+    // componentDidMount() {
+    //     this.props.fetchVideos();
+    // }
 
     playClick() {
-        this.props.history.push('/videos/1')
+        const id = this.props.match.params.profileId
+        this.props.history.push(`/profiles/${id}/videos/1`)
     }
     render() {
          

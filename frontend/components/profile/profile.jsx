@@ -36,7 +36,7 @@ class Profile extends React.Component {
             return ( profile.id === parseInt(profileId))
         })
         const genre_conts = (Object.values(this.props.genres).length > 0 ? (Object.values(this.props.genres).map( (genre, idx) => {
-            return <CarouselVideoContainer videoProfiles={this.props.videoProfiles} key={idx} genre={genre} profiles={this.props.profiles} />
+            return <CarouselVideoContainer videoProfiles={this.props.videoProfiles} key={idx+genre} genre={genre} profiles={this.props.profiles} />
         })) : <div></div> )
         const display = ( Object.values(this.props.profiles).length === 0 ? (<div> Hello </div>): (<div> Hello {this.props.profiles[this.props.match.params.profileId -1].name}</div>)) 
         const renderVideo = this.state.search?   <SearchVideoContainer videoProfiles={videoProfiles} searchOff={this.searchOff} videos={this.props.videos} search={this.state.currentSearch} />: (<React.Fragment> <MainVideoContainer videos={this.props.videos} /> {genre_conts} </React.Fragment>) ;

@@ -124,6 +124,7 @@ GenresVideo.create( genre_id: genre_id_2, video_id: video_id_6)
 GenresVideo.create( genre_id: genre_id_2, video_id: video_id_8)
 # GenresVideo.create( genre_id: genre_id_2, video_id: video_id_9)
 GenresVideo.create( genre_id: genre_id_2, video_id: video_id_5)
+GenresVideo.create( genre_id: genre_id_2, video_id: video_id_7)
 
 
 # GenresVideo.create( genre_id: genre_id_3, video_id: video_id_9)
@@ -132,6 +133,7 @@ GenresVideo.create( genre_id: genre_id_3, video_id: video_id_7)
 GenresVideo.create( genre_id: genre_id_3, video_id: video_id_6)
 GenresVideo.create( genre_id: genre_id_3, video_id: video_id_5)
 GenresVideo.create( genre_id: genre_id_3, video_id: video_id_2)
+GenresVideo.create( genre_id: genre_id_3, video_id: video_id_1)
 
 
 GenresVideo.create( genre_id: genre_id_4, video_id: video_id_1)

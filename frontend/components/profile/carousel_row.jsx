@@ -38,6 +38,9 @@ class CarouselRow extends React.Component {
         const right = <FontAwesomeIcon icon={faChevronRight} size={'3x'} />
         const left = <FontAwesomeIcon icon={faChevronLeft} />
         let length = Object.values(this.state.videos).length;
+        if ( length === (6+ this.state.count) ) {
+            this.resetCount();
+        }
         let videos_to_render = this.state.videos.slice((this.state.count),(this.state.count + 6)); 
         const videoProfile = Object.values(this.props.videoProfiles).filter( videoProfile => {
             return videoProfile.profile_id === parseInt(profileId)

@@ -9,13 +9,19 @@ class SearchVideo extends React.Component {
         this.props.searchOff();
     }
     render() {
+       const videoProfiles = Object.values(this.props.videoProfiles) || [];
+       const videoProfileIds = videoProfiles.map( videoProfile => { return videoProfile.id})
         const videos_to_render = Object.values(this.props.videos).filter( video => {
              const length = this.props.search.length;
              return video.title.toLowerCase().includes(this.props.search.toLowerCase());
         })
-       
+      
+       const profileId = this.props.profileId;
         let video_carousels = videos_to_render.map( (video,idx) => {
-           return <SmallVideoContainer video={video} key={idx} />
+            const videoProfile = videoProfiles.filter( videoProfile => {
+                return videoProfile.profile_id === parseInt(profileId)
+            })
+           return <SmallVideoContainer videoProfile={videoProfile} video={video} key={idx} />
         })
          if (this.props.search === "") {
             this.toggle();

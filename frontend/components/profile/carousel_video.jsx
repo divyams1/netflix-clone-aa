@@ -12,7 +12,6 @@ class CarouselVideo extends React.Component {
     componentDidMount() {
     }
     render() {
-       
         const videoProfiles = this.props.videoProfiles.video_profiles || [];
         const videoProfileIds = videoProfiles.map( videoProfile => { return videoProfile.id})
         const right = <FontAwesomeIcon icon={faChevronRight} />

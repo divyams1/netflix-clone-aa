@@ -48,15 +48,14 @@ class VideoShow extends React.Component {
             <h1> {videoTitle} </h1>
             <p> {videoDescrpition} </p>
         </div>) : (<div></div>))
-        const videoDisplay = (  <video className="show-video">
+        const videoDisplay = vid_render.length > 0? (  <video className="show-video" controls>
                      <source src={videoUrl} />
-                </video>)
-
+                </video>) : (<video className="show-video" controls> <source src=""></source></video>)
+        const paused = videoDisplay.paused;
+        debugger 
         const display = ( this.props.videos?   (
             <div key={videoTitle} onClick={this.toggleShow}>
-                <video className="show-video"  controls  >
-                     <source src={videoUrl} />
-                </video>
+                {videoDisplay}
 
                     {description}
                 </div>
